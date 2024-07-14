@@ -2,13 +2,11 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PostController;
-use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'index', [
-    'posts' => Post::query()->whereNotNull('published_at')->get()
-])->name('index');
+Route::get('/', [IndexController::class, 'index'])->name('index');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
