@@ -9,6 +9,7 @@ class PostCanBePublishedTest extends TestCase
 {
     public function test_post_can_be_published()
     {
+        /** @var Post $post */
         $post = Post::factory(['published_at' => null])->create();
 
         $this->assertFalse($post->published());

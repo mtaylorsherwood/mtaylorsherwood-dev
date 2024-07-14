@@ -19,12 +19,9 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
-        $title = $this->faker->sentence;
-        $slug = Str::slug($title);
-
         return [
-            'title' => $title,
-            'slug' => $slug,
+            'title' => $this->faker->sentence,
+            'slug' => fn (array $attributes) => Str::slug($attributes['title']),
             'post_content' => $this->faker->paragraphs(3, true),
             'published_at' => $this->faker->optional()->dateTimeBetween('-1 year'),
         ];

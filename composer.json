@@ -1,9 +1,15 @@
 {
-    "name": "laravel/laravel",
+    "name": "mtaylorsherwood/mtaylorsherwood-dev",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
-    "license": "MIT",
+    "homepage": "https://mtaylorsherwood.dev",
+    "authors": [
+        {
+            "name": "Martyn Taylor-Sherwood",
+            "homepage": "https://mtaylorsherwood.dev",
+            "role": "Developer"
+        }
+    ],
+    "license": "proprietary",
     "require": {
         "php": "^8.3",
         "laravel/framework": "^11.9",
@@ -47,7 +53,8 @@
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
-        ]
+        ],
+        "pint": "vendor/bin/pint --dirty"
     },
     "extra": {
         "laravel": {
