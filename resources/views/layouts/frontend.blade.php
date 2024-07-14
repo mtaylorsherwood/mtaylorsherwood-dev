@@ -40,7 +40,7 @@
             <main>
                 {{ $slot }}
             </main>
-            <footer class="bg-gray-900">
+            <footer class="bg-gray-800">
                 <div class="mx-auto max-w-7xl px-6 pb-16 pt-2 sm:pt-6 lg:px-8 lg:pt-8">
                     <div class="mt-4 border-t border-white/10 pt-2 md:flex md:items-center md:justify-between">
                         <p class="mt-2 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">&copy; 1986 - {{ date('Y') }} M Taylor-Sherwood. All rights reserved.</p>
