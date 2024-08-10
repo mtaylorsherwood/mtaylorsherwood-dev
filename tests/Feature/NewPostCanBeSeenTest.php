@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Feature;
+
 use App\Models\Post;
 use Tests\TestCase;
 
