@@ -40,6 +40,7 @@ class PostController extends Controller
 
         $post = new Post();
         $post->setAttribute('title', $request->title);
+        /** @phpstan-ignore  argument.type */
         $post->setAttribute('slug', Str::slug($request->title));
         $post->setAttribute('post_content', $request->post_content);
         $post->save();

@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory;
 
     protected $fillable = [
@@ -41,7 +42,7 @@ class Post extends Model
             return;
         }
 
-        $this->published_at = now();
+        $this->setAttribute('published_at', now());
         $this->save();
     }
 

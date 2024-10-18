@@ -15,7 +15,7 @@ class StorePostRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return Auth::user()->getAttribute('email') === User::EMAIL;
+        return Auth::user()?->getAttribute('email') === User::EMAIL;
     }
 
     /**
