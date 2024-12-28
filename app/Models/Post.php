@@ -16,7 +16,7 @@ class Post extends Model
         'title',
         'slug',
         'post_content',
-        'published_at'
+        'published_at',
     ];
 
     protected function casts(): array

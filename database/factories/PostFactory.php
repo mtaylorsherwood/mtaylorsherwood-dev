@@ -21,7 +21,7 @@ class PostFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence,
-            'slug' => fn (array $attributes) => Str::slug($attributes['title']),
+            'slug' => fn(array $attributes) => Str::slug($attributes['title']),
             'post_content' => $this->faker->paragraphs(3, true),
             'published_at' => $this->faker->optional()->dateTimeBetween('-1 year'),
         ];
