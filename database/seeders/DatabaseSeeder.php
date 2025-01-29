@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Seeders;
 
+use App\Models\Book;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -21,5 +22,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Post::factory()->count(rand(3, 25))->create();
+        Book::factory()->count(rand(3, 52))->create();
     }
 }
