@@ -6,17 +6,20 @@ services:
         container_name: mtaylorsherwood-dev
         image: mtaylorsherwood-dev
         ports:
-            - "8003:80"
+            - "1986:80"
         volumes:
-            -   .:/var/www/html
+            - .:/var/www/html
         links:
-            -   db
+            - db
     db:
-        image: mysql:8.4.2
+        image: postgres
+        restart: unless-stopped
         ports:
-            - "3306:3306"
+            - "5432:5432"
         environment:
-            MYSQL_ROOT_PASSWORD: mtaylorsherwood-dev-root
-            MYSQL_DATABASE: mtaylorsherwood-dev
-            MYSQL_USER: mtaylorsherwood-dev
-            MYSQL_PASSWORD: mtaylorsherwood-dev-password
+            POSTGRES_PASSWORD: laravel-password
+            POSTGRES_USER: laravel
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+volumes:
+    pgdata:
