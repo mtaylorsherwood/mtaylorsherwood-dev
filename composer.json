@@ -13,6 +13,7 @@
     "require": {
         "php": "^8.4",
         "laravel/framework": "^12.0",
+        "laravel/nightwatch": "^1.11",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.4",
         "livewire/volt": "^1.0",
