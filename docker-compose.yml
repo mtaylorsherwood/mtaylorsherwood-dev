@@ -9,7 +9,9 @@ services:
             - "1986:80"
         volumes:
             - .:/var/www/html
-        links:
+            - vendor:/var/www/html/vendor
+            - node_modules:/var/www/html/node_modules
+        depends_on:
             - db
     db:
         image: postgres
@@ -23,3 +25,5 @@ services:
             - pgdata:/var/lib/postgresql/data
 volumes:
     pgdata:
+    vendor:
+    node_modules:
