@@ -14,16 +14,18 @@ services:
         depends_on:
             - db
     db:
-        image: postgres
+        image: mysql
         restart: unless-stopped
         ports:
-            - "5432:5432"
+            - "3306:3306"
         environment:
-            POSTGRES_PASSWORD: laravel-password
-            POSTGRES_USER: laravel
+            MYSQL_ROOT_PASSWORD: mtaylorsherwood-dev-root
+            MYSQL_DATABASE: mtaylorsherwood-dev
+            MYSQL_USER: mtaylorsherwood-dev
+            MYSQL_PASSWORD: mtaylorsherwood-dev-password
         volumes:
-            - pgdata:/var/lib/postgresql/data
+            - dbdata:/var/lib/mysql
 volumes:
-    pgdata:
+    dbdata:
     vendor:
     node_modules:
