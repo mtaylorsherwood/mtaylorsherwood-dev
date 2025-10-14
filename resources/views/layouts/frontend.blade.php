@@ -29,12 +29,16 @@
                                     M Taylor-Sherwood
                                 </a>
                             </div>
-{{--                            <div class="hidden sm:ml-6 sm:block">--}}
-{{--                                <div class="flex space-x-4">--}}
-{{--                                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->--}}
-{{--                                    <a href="{{ route('index') }}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                            <div class="sm:ml-6 sm:block">
+                                <div class="flex space-x-4">
+                                    <a href="{{ route('index') }}" class="rounded-md pl-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+                                </div>
+                            </div>
+                            <div class="sm:ml-6 sm:block">
+                                <div class="flex space-x-4">
+                                    <a href="{{ route('bookshelf') }}" class="rounded-md px-2 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Bookshelf</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

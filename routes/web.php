@@ -2,11 +2,13 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\BookshelfController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/bookshelf', [BookshelfController::class, 'index'])->name('bookshelf');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
