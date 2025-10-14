@@ -37,4 +37,7 @@ return [
         ],
     ],
 
+    'cloudflare_analytics' => [
+        'key' => env('CLOUDFLARE_ANALYTICS_KEY'),
+    ],
 ];
