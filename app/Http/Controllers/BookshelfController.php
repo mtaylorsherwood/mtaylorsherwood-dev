@@ -19,7 +19,8 @@ final class BookshelfController extends Controller
     }
 
     private static array $currently_reading = [
-        ['The Subtle Art of Not Giving a F*ck', 'Mark Manson', '2025-10-17', null, 204],
+        ['The Stand', 'Stephen King', '2025-10-29', null, 1325],
+        ['Discipline is Destiny', 'Ryan Holiday', '2025-10-29', null, 326],
     ];
 
     private static array $finished_books = [
@@ -100,5 +101,6 @@ final class BookshelfController extends Controller
         ['The Software Engineer\'s Guidebook', 'Gergely Orosz', '2025-09-01', '2025-10-11', 391],
         ['Courage is Calling', 'Ryan Holiday', '2025-10-12', '2025-10-17', 275],
         ['Wind and Truth', 'Brandon Sanderson', '2025-10-01', '2025-10-27', 1329],
+        ['The Subtle Art of Not Giving a F*ck', 'Mark Manson', '2025-10-17', '2025-10-29', 204],
     ];
 }
