@@ -14,13 +14,18 @@ final class BookshelfController extends Controller
         $finished_books = collect(self::$finished_books)->sortBy(callback: 3, descending: true);
         $number_of_books = count($finished_books);
         $number_of_pages = $finished_books->sum('4');
+        $to_be_read = self::$to_be_read;
 
-        return view('bookshelf', compact('finished_books', 'currently_reading', 'number_of_books', 'number_of_pages'));
+        return view('bookshelf', compact('finished_books', 'currently_reading', 'number_of_books', 'number_of_pages', 'to_be_read'));
     }
 
+    private static array $to_be_read = [
+        ['The Stand', 'Stephen King', null, null, 1325],
+    ];
+
     private static array $currently_reading = [
-        ['The Stand', 'Stephen King', '2025-10-29', null, 1325],
-        ['Discipline is Destiny', 'Ryan Holiday', '2025-10-29', null, 326],
+        ['Elantris', 'Brandon Sanderson', '2025-11-06', null, 580],
+        ['The Comfort Crisis', 'Michael Easter', '2025-11-05', null, 281],
     ];
 
     private static array $finished_books = [
@@ -102,5 +107,6 @@ final class BookshelfController extends Controller
         ['Courage is Calling', 'Ryan Holiday', '2025-10-12', '2025-10-17', 275],
         ['Wind and Truth', 'Brandon Sanderson', '2025-10-01', '2025-10-27', 1329],
         ['The Subtle Art of Not Giving a F*ck', 'Mark Manson', '2025-10-17', '2025-10-29', 204],
+        ['Discipline is Destiny', 'Ryan Holiday', '2025-10-29', '2025-11-05', 326],
     ];
 }

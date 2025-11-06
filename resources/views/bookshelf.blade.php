@@ -42,6 +42,17 @@
                                     <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $book[4] }}</td>
                                 </tr>
                             @endforeach
+                            <tr>
+                                <td colspan="2" class="text-right py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">To Be Read</td>
+                            </tr>
+                            @foreach($to_be_read as $book)
+                                <tr>
+                                    <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">{{ $book[0] }}</td>
+                                    <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $book[1] }}</td>
+                                    <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">&nbsp;</td>
+                                    <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $book[4] }}</td>
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
