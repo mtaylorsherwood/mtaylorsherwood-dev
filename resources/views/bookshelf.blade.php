@@ -35,21 +35,41 @@
                                 <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ number_format($number_of_pages) }}</td>
                             </tr>
                             @foreach($finished_books as $book)
+                                @if($loop->first)
+                                    @php $year = intval(date('Y')) @endphp
+                                    <tr>
+                                        <td colspan="2" class="text-right py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">{{ date('Y') }}</td>
+                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $finished_by_year[$year]['count'] }}</td>
+                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ number_format($finished_by_year[$year]['pages']) }}</td>
+                                    </tr>
+                                @endif
+                                @if(intval(Carbon::createFromFormat('Y-m-d', $book[3])->format('Y')) < $year)
+                                    @php $year = intval(Carbon::createFromFormat('Y-m-d', $book[3])->format('Y')) @endphp
+                                    <tr>
+                                        <td colspan="2"
+                                            class="text-right py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">{{ Carbon::createFromFormat('Y-m-d', $book[3])->format('Y') }}</td>
+                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $finished_by_year[$year]['count'] }}</td>
+                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ number_format($finished_by_year[$year]['pages']) }}</td>
+                                    </tr>
+                                @endif
                                 <tr>
                                     <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">{{ $book[0] }}</td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $book[1] }}</td>
-                                    <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ date_format(Carbon::createFromFormat('Y-m-d', $book[3]), 'd-m-Y') }}</td>
+                                    <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ Carbon::createFromFormat('Y-m-d', $book[3])->format('d-m-Y') }}</td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $book[4] }}</td>
                                 </tr>
                             @endforeach
                             <tr>
                                 <td colspan="2" class="text-right py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">To Be Read</td>
+                                <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $number_to_be_read }}</td>
+                                <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ number_format($number_of_to_be_read_pages) }}</td>
                             </tr>
                             @foreach($to_be_read as $book)
                                 <tr>
                                     <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">{{ $book[0] }}</td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $book[1] }}</td>
-                                    <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">&nbsp;</td>
+                                    <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ is_null($book[2]) ? '' : Carbon::createFromFormat('Y-m-d', $book[2])->format('M Y') }}</td>
+                                    <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ is_null($book[2]) ? '' : Carbon::createFromFormat('Y-m-d', $book[2])->format('M Y') }}</td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $book[4] }}</td>
                                 </tr>
                             @endforeach

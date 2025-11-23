@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use Illuminate\View\View;
+use Illuminate\Support\Carbon;
 
 final class BookshelfController extends Controller
 {
@@ -14,18 +15,100 @@ final class BookshelfController extends Controller
         $finished_books = collect(self::$finished_books)->sortBy(callback: 3, descending: true);
         $number_of_books = count($finished_books);
         $number_of_pages = $finished_books->sum('4');
+        $finished_by_year = collect(self::$finished_books)
+            ->groupBy(function (array $book): int {
+                return (int) Carbon::createFromFormat('Y-m-d', $book[3])->format('Y');
+            })
+            ->map(function ($group) {
+                return [
+                    'count' => $group->count(),
+                    'pages' => $group->sum(fn (array $b) => $b[4]),
+                ];
+            })
+            ->sortKeysDesc()
+            ->toArray();
         $to_be_read = self::$to_be_read;
+        $number_to_be_read = $finished_books->count();
+        $number_of_to_be_read_pages = $finished_books->sum('4');
 
-        return view('bookshelf', compact('finished_books', 'currently_reading', 'number_of_books', 'number_of_pages', 'to_be_read'));
+        return view('bookshelf', compact('finished_books', 'currently_reading', 'number_of_books', 'number_of_pages', 'to_be_read', 'finished_by_year', 'number_to_be_read', 'number_of_to_be_read_pages'));
     }
 
     private static array $to_be_read = [
-        ['Project Hail Mary', 'Andy Weir', null, null, 476],
-        ['Thinking In Systems', 'Donella Meadows', null, null, 203],
+        ['Lost Connections', 'Johann Hari', '2025-12-01', null, 319],
+        ['Radical Candor', 'Kim Scott', '2025-12-01', null, 302],
+        ['Scarcity Brain', 'Michael Easter', '2025-12-01', null, 288],
+        ['Yumi and the Nightmare Painter', 'Brandon Sanderson', '2025-12-01', null, 362],
+        ['Atomic Habits', 'James Clear', '2026-01-01', null, 253],
+        ['Clear Thinking', 'Shane Parish', '2026-01-01', null, 255],
+        ['Consider Phlebas', 'Iain M. Banks', '2026-01-01', null, 496],
+        ['Digital Minimalism', 'Cal Newport', '2026-01-01', null, 264],
+        ['Wisdom Takes Work', 'Ryan Holiday', '2026-01-01', null, 382],
+        ['"No Offence, But..."', 'Gina Martin', null, null, 310],
+        ['168 Hours: You Have More Time Than You Think', 'Laura Vanderkam', null, null, 238],
+        ['7 Habits of Highly Effective People', 'Stephen R Covey', null, null, 332],
+        ['A Brief History of Black Holes And why Nearly Everything You Know about Them is Wrong', 'Becky Smethurst', null, null, 264],
+        ['A Time for Mercy', 'John Grisham', null, null, 464],
+        ['ANATOMY OF A BREAKTHROUGH', 'Adam Alter', null, null, 247],
+        ['Be the Change A Toolkit for the Activist in You', 'Gina Martin', null, null, 283],
+        ['Black Holes', 'Brian Cox, Jeffrey R. Forshaw', null, null, 263],
+        ['Crucial Conversations', 'Joseph Grenny, Kerry Patterson, Ron McMillan, Al Switzler, Emily Gregory', null, null, 268],
+        ['Designing Your Life Build the Perfect Career, Step by Step', 'Bill Burnett, Dave Evans', null, null, 198],
+        ['Drive', 'Daniel H. Pink', null, null, 215],
+        ['Feel-Good Productivity', 'Ali Abdaal', null, null, 262],
+        ['Getting Things Done', 'David Allen', null, null, 301],
+        ['Hidden Potential', 'Adam Grant', null, null, 242],
+        ['How to Calm Your Mind Finding Peace and Productivity in Anxious Times', 'Chris Bailey', null, null, 232],
+        ['How to Change Your Life Lessons on Transformation from the World of High Performance', 'Jake Humphrey, Damian Hughes', null, null, 220],
+        ['How to Do Nothing: Resisting the Attention Economy', 'Jenny Odell', null, null, 204],
+        ['How to Win Friends and Influence People', 'Dale Carnegie', null, null, 264],
+        ['Hyperfocus: How to Work Less to Achieve More', 'Chris Bailey', null, null, 215],
+        ['Katabasis', 'R. F. Kuang', null, null, 541],
+        ['Leaders Eat Last', 'Simon Sinek', null, null, 305],
+        ['Make Time', 'Jake Knapp, John Zeratsky', null, null, 256],
+        ['Mastery', 'Robert Greene', null, null, 311],
+        ['Multipliers', 'Liz Wiseman', null, null, 284],
+        ['Never Split the Difference', 'Chris Voss', null, null, 245],
+        ['Night Manager', 'John Le Carré', null, null, 473],
+        ['No Bullsh*t Leadership', 'Chris Hirst', null, null, 209],
+        ['Revenge Of The Tipping Point', 'Malcolm Gladwell', null, null, 304],
+        ['Scarcity Brain', 'Michael Easter', null, null, 288],
+        ['Strong Ground', 'Brené Brown', null, null, 394],
+        ['Supercommunicators', 'Charles Duhigg', null, null, 246],
+        ['Surrounded by Idiots', 'Thomas Erikson', null, null, 267],
+        ['The 4-Hour Work Week: ', 'Tim Ferriss', null, null, 376],
+        ['The 5 Types of Wealth', 'Sahil Bloom', null, null, 369],
+        ['The Blade Itself', 'Joe Abercrombie', null, null, 515],
+        ['The Body Keeps the Score', 'Bessel A. Van der Kolk', null, null, 428],
+        ['The Exchange', 'John Grisham', null, null, 334],
+        ['The Firm', 'John Grisham', null, null, 490],
+        ['The Gunslinger', 'Stephen King', null, null, 238],
+        ['The Happiness Hypothesis', 'Jonathan Haidt', null, null, 243],
+        ['The Happy Index', 'James Timpson', null, null, 284],
+        ['The Infinite Game', 'Simon Sinek', null, null, 224],
+        ['The Innovation Stack', 'Jim McKelvey', null, null, 261],
+        ['The Let Them Theory', 'Mel Robbins', null, null, 304],
+        ['The Making of a Leader', 'Tom Young', null, null, 352],
+        ['The Player of Games', 'Iain M. Banks', null, null, 308],
+        ['The Power of Habit', 'Charles Duhigg', null, null, 286],
+        ['The Spy Who Came in From The Cold', 'John le Carré', null, null, 253],
+        ['The Stand', 'Stephen King', null, null, 1325],
+        ['The Three-Body Problem', 'Cixin Liu', null, null, 424],
+        ['The Tipping Point', 'Malcolm Gladwell', null, null, 259],
+        ['This is Marketing', 'SETH GODIN', null, null, 252],
+        ['To Kill a Mockingbird', 'Harper Lee', null, null, 309],
+        ['Tranquility by Tuesday', 'Laura Vanderkam', null, null, 246],
+        ['Ultra-Processed People', 'Chris van Tulleken', null, null, 330],
+        ['Ultralearning', 'Scott H. Young', null, null, 257],
+        ['Upstream', 'Dan Heath', null, null, 244],
+        ['What Color Is Your Parachute? 2022 Edition.', 'Richard N. Bolles', null, null, 331],
+        ['What You Do Is Who You Are', 'Ben Horowitz', null, null, 246],
+        ['Zero To One', 'Peter Thiel with Blake Masters', null, null, 195],
     ];
 
     private static array $currently_reading = [
-        ['Right Thing, Right Now', 'Ryan Holiday', '2025-11-09', null, 338],
+        ['Project Hail Mary', 'Andy Weir', '2025-11-23', null, 476],
+        ['Thinking In Systems', 'Donella Meadows', '2025-11-22', null, 203],
     ];
 
     private static array $finished_books = [
@@ -110,5 +193,6 @@ final class BookshelfController extends Controller
         ['Discipline is Destiny', 'Ryan Holiday', '2025-10-29', '2025-11-05', 326],
         ['The Comfort Crisis', 'Michael Easter', '2025-11-05', '2025-11-08', 281],
         ['Elantris', 'Brandon Sanderson', '2025-11-06', '2025-11-19', 580],
+        ['Right Thing, Right Now', 'Ryan Holiday', '2025-11-09', '2025-11-22', 338],
     ];
 }
