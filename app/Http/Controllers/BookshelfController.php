@@ -12,12 +12,12 @@ final class BookshelfController extends Controller
     public function index(): View
     {
         $currently_reading = self::$currently_reading;
-        $finished_books = collect(self::$finished_books)->sortBy(callback: 3, descending: true);
+        $finished_books = collect(self::$finished_books)->sortBy(callback: '3', descending: true);
         $number_of_books = count($finished_books);
         $number_of_pages = $finished_books->sum('4');
         $finished_by_year = collect(self::$finished_books)
             ->groupBy(function (array $book): int {
-                return (int) Carbon::createFromFormat('Y-m-d', $book[3])->format('Y');
+                return (int) Carbon::createFromFormat('Y-m-d', $book[3])?->format('Y');
             })
             ->map(function ($group) {
                 return [
@@ -34,6 +34,9 @@ final class BookshelfController extends Controller
         return view('bookshelf', compact('finished_books', 'currently_reading', 'number_of_books', 'number_of_pages', 'to_be_read', 'finished_by_year', 'number_to_be_read', 'number_of_to_be_read_pages'));
     }
 
+    /**
+     * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
+     */
     private static array $to_be_read = [
         ['Lost Connections', 'Johann Hari', '2025-12-01', null, 319],
         ['Radical Candor', 'Kim Scott', '2025-12-01', null, 302],
@@ -106,11 +109,17 @@ final class BookshelfController extends Controller
         ['Zero To One', 'Peter Thiel with Blake Masters', null, null, 195],
     ];
 
+    /**
+     * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
+     */
     private static array $currently_reading = [
         ['Project Hail Mary', 'Andy Weir', '2025-11-23', null, 476],
         ['Thinking In Systems', 'Donella Meadows', '2025-11-22', null, 203],
     ];
 
+    /**
+     * @var array<int, array{0:string,1:string,2:string,3:string,4:int}>
+     */
     private static array $finished_books = [
         ['The Eye of the World', 'Robert Jordan', '2021-06-01', '2021-06-30', 753],
         ['The Great Hunt', 'Robert Jordan', '2021-07-01', '2021-07-31', 721],
