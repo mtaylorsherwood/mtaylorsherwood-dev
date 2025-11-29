@@ -27,9 +27,9 @@ final class BookshelfController extends Controller
             })
             ->sortKeysDesc()
             ->toArray();
-        $to_be_read = self::$to_be_read;
-        $number_to_be_read = $finished_books->count();
-        $number_of_to_be_read_pages = $finished_books->sum('4');
+        $to_be_read = collect(self::$to_be_read);
+        $number_to_be_read = $to_be_read->count();
+        $number_of_to_be_read_pages = $to_be_read->sum('4');
 
         return view('bookshelf', compact('finished_books', 'currently_reading', 'number_of_books', 'number_of_pages', 'to_be_read', 'finished_by_year', 'number_to_be_read', 'number_of_to_be_read_pages'));
     }
@@ -53,6 +53,7 @@ final class BookshelfController extends Controller
         ['A Brief History of Black Holes And why Nearly Everything You Know about Them is Wrong', 'Becky Smethurst', null, null, 264],
         ['A Time for Mercy', 'John Grisham', null, null, 464],
         ['ANATOMY OF A BREAKTHROUGH', 'Adam Alter', null, null, 247],
+        ['Assassin\'s Apprentice', 'Robin Hobb', null, null, 392],
         ['Be the Change A Toolkit for the Activist in You', 'Gina Martin', null, null, 283],
         ['Black Holes', 'Brian Cox, Jeffrey R. Forshaw', null, null, 263],
         ['Crucial Conversations', 'Joseph Grenny, Kerry Patterson, Ron McMillan, Al Switzler, Emily Gregory', null, null, 268],
@@ -74,6 +75,7 @@ final class BookshelfController extends Controller
         ['Never Split the Difference', 'Chris Voss', null, null, 245],
         ['Night Manager', 'John Le Carré', null, null, 473],
         ['No Bullsh*t Leadership', 'Chris Hirst', null, null, 209],
+        ['Red Rising', 'James Islington', null, null, 382],
         ['Revenge Of The Tipping Point', 'Malcolm Gladwell', null, null, 304],
         ['Scarcity Brain', 'Michael Easter', null, null, 288],
         ['Strong Ground', 'Brené Brown', null, null, 394],
@@ -94,10 +96,12 @@ final class BookshelfController extends Controller
         ['The Making of a Leader', 'Tom Young', null, null, 352],
         ['The Player of Games', 'Iain M. Banks', null, null, 308],
         ['The Power of Habit', 'Charles Duhigg', null, null, 286],
+        ['The Shadow of the Gods', 'John Gwynne', null, null, 478],
         ['The Spy Who Came in From The Cold', 'John le Carré', null, null, 253],
         ['The Stand', 'Stephen King', null, null, 1325],
         ['The Three-Body Problem', 'Cixin Liu', null, null, 424],
         ['The Tipping Point', 'Malcolm Gladwell', null, null, 259],
+        ['The Will of the Many', 'James Islington', null, null, 684],
         ['This is Marketing', 'SETH GODIN', null, null, 252],
         ['To Kill a Mockingbird', 'Harper Lee', null, null, 309],
         ['Tranquility by Tuesday', 'Laura Vanderkam', null, null, 246],
@@ -114,7 +118,6 @@ final class BookshelfController extends Controller
      */
     private static array $currently_reading = [
         ['Project Hail Mary', 'Andy Weir', '2025-11-23', null, 476],
-        ['Thinking In Systems', 'Donella Meadows', '2025-11-22', null, 203],
     ];
 
     /**
@@ -203,5 +206,6 @@ final class BookshelfController extends Controller
         ['The Comfort Crisis', 'Michael Easter', '2025-11-05', '2025-11-08', 281],
         ['Elantris', 'Brandon Sanderson', '2025-11-06', '2025-11-19', 580],
         ['Right Thing, Right Now', 'Ryan Holiday', '2025-11-09', '2025-11-22', 338],
+        ['Thinking In Systems', 'Donella Meadows', '2025-11-22', '2025-11-28', 203],
     ];
 }
