@@ -75,7 +75,7 @@ final class BookshelfController extends Controller
         ['Never Split the Difference', 'Chris Voss', null, null, 245],
         ['Night Manager', 'John Le Carré', null, null, 473],
         ['No Bullsh*t Leadership', 'Chris Hirst', null, null, 209],
-        ['Red Rising', 'James Islington', null, null, 382],
+        ['Red Rising', 'Pierce Brown', null, null, 382],
         ['Revenge Of The Tipping Point', 'Malcolm Gladwell', null, null, 304],
         ['Scarcity Brain', 'Michael Easter', null, null, 288],
         ['Strong Ground', 'Brené Brown', null, null, 394],
