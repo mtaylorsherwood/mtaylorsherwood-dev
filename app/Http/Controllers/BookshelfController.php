@@ -41,9 +41,7 @@ final class BookshelfController extends Controller
         ['Lost Connections', 'Johann Hari', '2025-12-01', null, 319],
         ['Radical Candor', 'Kim Scott', '2025-12-01', null, 302],
         ['Scarcity Brain', 'Michael Easter', '2025-12-01', null, 288],
-        ['Yumi and the Nightmare Painter', 'Brandon Sanderson', '2025-12-01', null, 362],
         ['Atomic Habits', 'James Clear', '2026-01-01', null, 253],
-        ['Clear Thinking', 'Shane Parish', '2026-01-01', null, 255],
         ['Consider Phlebas', 'Iain M. Banks', '2026-01-01', null, 496],
         ['Digital Minimalism', 'Cal Newport', '2026-01-01', null, 264],
         ['Wisdom Takes Work', 'Ryan Holiday', '2026-01-01', null, 382],
@@ -117,7 +115,8 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
-        ['Project Hail Mary', 'Andy Weir', '2025-11-23', null, 476],
+        ['Yumi and the Nightmare Painter', 'Brandon Sanderson', '2025-12-02', null, 362],
+        ['Clear Thinking', 'Shane Parish', '2026-01-02', null, 255],
     ];
 
     /**
@@ -207,5 +206,6 @@ final class BookshelfController extends Controller
         ['Elantris', 'Brandon Sanderson', '2025-11-06', '2025-11-19', 580],
         ['Right Thing, Right Now', 'Ryan Holiday', '2025-11-09', '2025-11-22', 338],
         ['Thinking In Systems', 'Donella Meadows', '2025-11-22', '2025-11-28', 203],
+        ['Project Hail Mary', 'Andy Weir', '2025-11-23', '2025-12-01', 476],
     ];
 }
