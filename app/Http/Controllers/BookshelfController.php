@@ -44,6 +44,7 @@ final class BookshelfController extends Controller
         ['Atomic Habits', 'James Clear', '2026-01-01', null, 253],
         ['Consider Phlebas', 'Iain M. Banks', '2026-01-01', null, 496],
         ['Digital Minimalism', 'Cal Newport', '2026-01-01', null, 264],
+        ['Dungeon Crawler Carl', 'Matt Dinniman', null, null, 427],
         ['Wisdom Takes Work', 'Ryan Holiday', '2026-01-01', null, 382],
         ['"No Offence, But..."', 'Gina Martin', null, null, 310],
         ['168 Hours: You Have More Time Than You Think', 'Laura Vanderkam', null, null, 238],
@@ -94,6 +95,7 @@ final class BookshelfController extends Controller
         ['The Making of a Leader', 'Tom Young', null, null, 352],
         ['The Player of Games', 'Iain M. Banks', null, null, 308],
         ['The Power of Habit', 'Charles Duhigg', null, null, 286],
+        ['The Priory of the Orange Tree', 'Samantha Shannon', null, null, 804],
         ['The Shadow of the Gods', 'John Gwynne', null, null, 478],
         ['The Spy Who Came in From The Cold', 'John le Carré', null, null, 253],
         ['The Stand', 'Stephen King', null, null, 1325],
@@ -116,7 +118,7 @@ final class BookshelfController extends Controller
      */
     private static array $currently_reading = [
         ['Yumi and the Nightmare Painter', 'Brandon Sanderson', '2025-12-02', null, 362],
-        ['Clear Thinking', 'Shane Parish', '2026-01-02', null, 255],
+        ['Clear Thinking', 'Shane Parrish', '2026-01-02', null, 255],
     ];
 
     /**
