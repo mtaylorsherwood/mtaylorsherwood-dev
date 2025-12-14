@@ -114,4 +114,13 @@ return [
 
     'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Enviro Reading Access
+    |--------------------------------------------------------------------------
+    */
+
+    'enviro_username' => env('ENVIRO_USERNAME'),
+    'enviro_password' => env('ENVIRO_PASSWORD'),
+
 ];
