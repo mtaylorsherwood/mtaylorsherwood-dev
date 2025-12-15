@@ -28,33 +28,25 @@ class StoreReadingRequest extends FormRequest
                 'required',
                 'string',
             ],
-            'model' => [
-                'required',
-                'string',
-            ],
-            'uid' => [
-                'required',
-                'string',
-            ],
             'timestamp' => [
                 'required',
                 'date_format:Y-m-d H:i:s',
             ],
             'readings.temperature' => [
                 'required',
-                'decimal:2',
+                'numeric:strict',
             ],
             'readings.humidity' => [
                 'required',
-                'decimal:2',
+                'numeric:strict',
             ],
             'readings.pressure' => [
                 'required',
-                'decimal:2',
+                'numeric:strict',
             ],
             'readings.noise' => [
                 'required',
-                'decimal:2',
+                'numeric:strict',
             ],
             'readings.pm1' => [
                 'required',
@@ -67,10 +59,6 @@ class StoreReadingRequest extends FormRequest
             'readings.pm10' => [
                 'required',
                 'numeric:strict',
-            ],
-            'readings.voltage' => [
-                'nullable',
-                'decimal:3',
             ],
         ];
     }

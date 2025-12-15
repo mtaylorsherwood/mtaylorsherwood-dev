@@ -14,10 +14,6 @@ final class EnviroController extends Controller
     {
         $saved_reading = $recordReadingAction->execute($request->validated());
 
-        if ($saved_reading) {
-            return response(status: 200);
-        } else {
-            return response(status: 400);
-        }
+        return $saved_reading ? response(status: 200) : response(status: 400);
     }
 }

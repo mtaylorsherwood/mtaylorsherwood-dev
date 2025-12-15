@@ -14,9 +14,7 @@ class SensorAuthTest extends TestCase
 
     private static array $reading_data = [
         "nickname" => "woodside-kitchen-garden",
-        "model" => "urban",
-        "uid" => "e6614c775b8c4035",
-        "timestamp" => "2025-12-25T10:01:24Z",
+        "timestamp" => "2025-12-25 10:01:24",
         "readings" => [
             "temperature" => 7.57,
             "humidity" => 49.33,
@@ -45,7 +43,7 @@ class SensorAuthTest extends TestCase
 
         $response->assertSuccessful();
 
-        $reading = SensorReading::query()->where('uid', 'e6614c775b8c4035')->first();
+        $reading = SensorReading::query()->where('timestamp', '2025-12-25 10:01:24')->first();
         $this->assertNotNull($reading);
     }
 }

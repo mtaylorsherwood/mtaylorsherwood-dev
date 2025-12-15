@@ -11,7 +11,6 @@ class SensorReading extends Model
 {
     protected $fillable = [
         'sensor',
-        'uid',
         'timestamp',
         'temperature',
         'humidity',
@@ -20,7 +19,6 @@ class SensorReading extends Model
         'pm1',
         'pm2_5',
         'pm10',
-        'voltage',
     ];
 
     protected function casts(): array
@@ -35,7 +33,6 @@ class SensorReading extends Model
             'pm2_5' => 'decimal:2',
             'pm3' => 'decimal:2',
             'pm10' => 'decimal:2',
-            'voltage' => 'decimal:3',
         ];
     }
 
@@ -50,7 +47,6 @@ class SensorReading extends Model
         $reading = new SensorReading()->fill(
             [
                 'sensor' => $attributes['nickname'],
-                'uid' => $attributes['uid'],
                 'timestamp' => new DateTime($attributes['timestamp'])->format('Y-m-d H:i:s'),
                 'temperature' => $attributes['readings.temperature'],
                 'humidity' => $attributes['readings.humidity'],
@@ -59,7 +55,6 @@ class SensorReading extends Model
                 'pm1' => $attributes['readings.pm1'],
                 'pm2_5' => $attributes['readings.pm2_5'],
                 'pm10' => $attributes['readings.pm10'],
-                'voltage' => $attributes['readings.voltage'],
             ],
         );
 
