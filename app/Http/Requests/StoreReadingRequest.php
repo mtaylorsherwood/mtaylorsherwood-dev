@@ -38,7 +38,7 @@ class StoreReadingRequest extends FormRequest
             ],
             'timestamp' => [
                 'required',
-                'date_format:Y-m-d\TH:i:s\Z',
+                'date_format:Y-m-d H:i:s',
             ],
             'readings.temperature' => [
                 'required',
@@ -69,7 +69,7 @@ class StoreReadingRequest extends FormRequest
                 'numeric:strict',
             ],
             'readings.voltage' => [
-                'required',
+                'nullable',
                 'decimal:3',
             ],
         ];

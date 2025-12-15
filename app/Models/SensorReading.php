@@ -26,7 +26,7 @@ class SensorReading extends Model
     protected function casts(): array
     {
         return [
-            'timestamp' => 'date:Y-m-d:H:i:s',
+            'timestamp' => 'date:Y-m-d H:i:s',
             'temperature' => 'decimal:2',
             'humidity' => 'decimal:2',
             'pressure' => 'decimal:2',
