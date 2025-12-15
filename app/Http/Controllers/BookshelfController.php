@@ -57,7 +57,6 @@ final class BookshelfController extends Controller
         ['Crucial Conversations', 'Joseph Grenny, Kerry Patterson, Ron McMillan, Al Switzler, Emily Gregory', null, null, 268],
         ['Designing Your Life Build the Perfect Career, Step by Step', 'Bill Burnett, Dave Evans', null, null, 198],
         ['Drive', 'Daniel H. Pink', null, null, 215],
-        ['Dungeon Crawler Carl', 'Matt Dinniman', null, null, 427],
         ['Feel-Good Productivity', 'Ali Abdaal', null, null, 262],
         ['Getting Things Done', 'David Allen', null, null, 301],
         ['Hidden Potential', 'Adam Grant', null, null, 242],
@@ -120,6 +119,7 @@ final class BookshelfController extends Controller
      */
     private static array $currently_reading = [
         ['Clear Thinking', 'Shane Parrish', '2026-01-02', null, 255],
+        ['Dungeon Crawler Carl', 'Matt Dinniman', '2025-12-15', null, 427],
     ];
 
     /**
