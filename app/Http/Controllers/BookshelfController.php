@@ -38,10 +38,9 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
      */
     private static array $to_be_read = [
-        ['Lost Connections', 'Johann Hari', '2025-12-01', null, 319],
         ['Radical Candor', 'Kim Scott', '2025-12-01', null, 302],
-        ['Scarcity Brain', 'Michael Easter', '2025-12-01', null, 288],
         ['Atomic Habits', 'James Clear', '2026-01-01', null, 253],
+        ['Lost Connections', 'Johann Hari', '2025-01-01', null, 319],
         ['Consider Phlebas', 'Iain M. Banks', '2026-01-01', null, 496],
         ['Digital Minimalism', 'Cal Newport', '2026-01-01', null, 264],
         ['Wisdom Takes Work', 'Ryan Holiday', '2026-01-01', null, 382],
@@ -119,7 +118,6 @@ final class BookshelfController extends Controller
      */
     private static array $currently_reading = [
         ['Clear Thinking', 'Shane Parrish', '2026-01-02', null, 255],
-        ['Dungeon Crawler Carl', 'Matt Dinniman', '2025-12-15', null, 427],
     ];
 
     /**
@@ -211,5 +209,6 @@ final class BookshelfController extends Controller
         ['Thinking In Systems', 'Donella Meadows', '2025-11-22', '2025-11-28', 203],
         ['Project Hail Mary', 'Andy Weir', '2025-11-23', '2025-12-01', 476],
         ['Yumi and the Nightmare Painter', 'Brandon Sanderson', '2025-12-02', '2025-12-14', 362],
+        ['Dungeon Crawler Carl', 'Matt Dinniman', '2025-12-15', '2025-12-23', 427],
     ];
 }
