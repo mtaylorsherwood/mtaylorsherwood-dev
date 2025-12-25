@@ -68,6 +68,7 @@ final class BookshelfController extends Controller
         ['Katabasis', 'R. F. Kuang', null, null, 541],
         ['Leaders Eat Last', 'Simon Sinek', null, null, 305],
         ['Make Time', 'Jake Knapp, John Zeratsky', null, null, 256],
+        ['Malice', 'John Gwynne', null, null, 627],
         ['Mastery', 'Robert Greene', null, null, 311],
         ['Multipliers', 'Liz Wiseman', null, null, 284],
         ['Never Split the Difference', 'Chris Voss', null, null, 245],
