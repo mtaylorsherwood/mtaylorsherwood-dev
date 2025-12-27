@@ -38,12 +38,12 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
      */
     private static array $to_be_read = [
-        ['Radical Candor', 'Kim Scott', '2025-12-01', null, 302],
+        ['Radical Candor', 'Kim Scott', '2026-01-01', null, 302],
         ['Atomic Habits', 'James Clear', '2026-01-01', null, 253],
-        ['Lost Connections', 'Johann Hari', '2025-01-01', null, 319],
+        ['Lost Connections', 'Johann Hari', '2026-01-01', null, 319],
         ['Consider Phlebas', 'Iain M. Banks', '2026-01-01', null, 496],
         ['Digital Minimalism', 'Cal Newport', '2026-01-01', null, 264],
-        ['Wisdom Takes Work', 'Ryan Holiday', '2026-01-01', null, 382],
+        ['Wisdom Takes Work', 'Ryan Holiday', '2026-02-01', null, 382],
         ['"No Offence, But..."', 'Gina Martin', null, null, 310],
         ['168 Hours: You Have More Time Than You Think', 'Laura Vanderkam', null, null, 238],
         ['7 Habits of Highly Effective People', 'Stephen R Covey', null, null, 332],
@@ -54,6 +54,7 @@ final class BookshelfController extends Controller
         ['Be the Change A Toolkit for the Activist in You', 'Gina Martin', null, null, 283],
         ['Black Holes', 'Brian Cox, Jeffrey R. Forshaw', null, null, 263],
         ['Crucial Conversations', 'Joseph Grenny, Kerry Patterson, Ron McMillan, Al Switzler, Emily Gregory', null, null, 268],
+        ['City of Last Chances', 'Adrian Tchaikovsky', null, null, 498],
         ['Designing Your Life Build the Perfect Career, Step by Step', 'Bill Burnett, Dave Evans', null, null, 198],
         ['Drive', 'Daniel H. Pink', null, null, 215],
         ['Feel-Good Productivity', 'Ali Abdaal', null, null, 262],
@@ -105,7 +106,8 @@ final class BookshelfController extends Controller
         ['The Three-Body Problem', 'Cixin Liu', null, null, 424],
         ['The Tipping Point', 'Malcolm Gladwell', null, null, 259],
         ['The Will of the Many', 'James Islington', null, null, 684],
-        ['This is Marketing', 'SETH GODIN', null, null, 252],
+        ['Thirsty', 'Tom Gilbey', null, null, 278],
+        ['This is Marketing', 'Seth Godin', null, null, 252],
         ['To Kill a Mockingbird', 'Harper Lee', null, null, 309],
         ['Tranquility by Tuesday', 'Laura Vanderkam', null, null, 246],
         ['Ultra-Processed People', 'Chris van Tulleken', null, null, 330],
