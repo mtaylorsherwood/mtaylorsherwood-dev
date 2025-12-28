@@ -38,23 +38,24 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
      */
     private static array $to_be_read = [
-        ['Radical Candor', 'Kim Scott', '2026-01-01', null, 302],
         ['Atomic Habits', 'James Clear', '2026-01-01', null, 253],
-        ['Lost Connections', 'Johann Hari', '2026-01-01', null, 319],
-        ['Consider Phlebas', 'Iain M. Banks', '2026-01-01', null, 496],
         ['Digital Minimalism', 'Cal Newport', '2026-01-01', null, 264],
+        ['Lost Connections', 'Johann Hari', '2026-01-01', null, 319],
+        ['Radical Candor', 'Kim Scott', '2026-01-01', null, 302],
+        ['The Name of the Wind', 'Patrick Rothfuss', '2026-01-01', null, 662],
         ['Wisdom Takes Work', 'Ryan Holiday', '2026-02-01', null, 382],
         ['"No Offence, But..."', 'Gina Martin', null, null, 310],
         ['168 Hours: You Have More Time Than You Think', 'Laura Vanderkam', null, null, 238],
         ['7 Habits of Highly Effective People', 'Stephen R Covey', null, null, 332],
         ['A Brief History of Black Holes And why Nearly Everything You Know about Them is Wrong', 'Becky Smethurst', null, null, 264],
         ['A Time for Mercy', 'John Grisham', null, null, 464],
-        ['ANATOMY OF A BREAKTHROUGH', 'Adam Alter', null, null, 247],
+        ['Anatomy of a Breakthrough', 'Adam Alter', null, null, 247],
         ['Assassin\'s Apprentice', 'Robin Hobb', null, null, 392],
         ['Be the Change A Toolkit for the Activist in You', 'Gina Martin', null, null, 283],
         ['Black Holes', 'Brian Cox, Jeffrey R. Forshaw', null, null, 263],
-        ['Crucial Conversations', 'Joseph Grenny, Kerry Patterson, Ron McMillan, Al Switzler, Emily Gregory', null, null, 268],
         ['City of Last Chances', 'Adrian Tchaikovsky', null, null, 498],
+        ['Consider Phlebas', 'Iain M. Banks', null, null, 496],
+        ['Crucial Conversations', 'Joseph Grenny, Kerry Patterson, Ron McMillan, Al Switzler, Emily Gregory', null, null, 268],
         ['Designing Your Life Build the Perfect Career, Step by Step', 'Bill Burnett, Dave Evans', null, null, 198],
         ['Drive', 'Daniel H. Pink', null, null, 215],
         ['Feel-Good Productivity', 'Ali Abdaal', null, null, 262],
@@ -95,18 +96,15 @@ final class BookshelfController extends Controller
         ['The Innovation Stack', 'Jim McKelvey', null, null, 261],
         ['The Let Them Theory', 'Mel Robbins', null, null, 304],
         ['The Making of a Leader', 'Tom Young', null, null, 352],
-        ['The Name of the Wind', 'Patrick Rothfuss', null, null, 662],
         ['The Player of Games', 'Iain M. Banks', null, null, 308],
         ['The Power of Habit', 'Charles Duhigg', null, null, 286],
         ['The Priory of the Orange Tree', 'Samantha Shannon', null, null, 804],
         ['The Shadow of the Gods', 'John Gwynne', null, null, 478],
-        ['The Shadow of What Was Lost', 'James Islington', null, null, 693],
         ['The Spy Who Came in From The Cold', 'John le Carré', null, null, 253],
         ['The Stand', 'Stephen King', null, null, 1325],
         ['The Three-Body Problem', 'Cixin Liu', null, null, 424],
         ['The Tipping Point', 'Malcolm Gladwell', null, null, 259],
         ['The Will of the Many', 'James Islington', null, null, 684],
-        ['Thirsty', 'Tom Gilbey', null, null, 278],
         ['This is Marketing', 'Seth Godin', null, null, 252],
         ['To Kill a Mockingbird', 'Harper Lee', null, null, 309],
         ['Tranquility by Tuesday', 'Laura Vanderkam', null, null, 246],
@@ -122,7 +120,9 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
-        ['Clear Thinking', 'Shane Parrish', '2026-01-02', null, 255],
+        ['Clear Thinking', 'Shane Parrish', '2025-12-02', null, 255],
+        ['Thirsty', 'Tom Gilbey', '2025-12-27', null, 278],
+        ['The Shadow of What Was Lost', 'James Islington', '2025-12-29', null, 693],
     ];
 
     /**

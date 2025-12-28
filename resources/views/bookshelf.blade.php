@@ -22,6 +22,7 @@
                             </thead>
                             <tbody class="divide-y divide-gray-200">
                             @foreach($currently_reading as $book)
+                                @continue(Carbon::createFromFormat('Y-m-d', $book[2])->isFuture())
                                 <tr>
                                     <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">{{ $book[0] }}</td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $book[1] }}</td>
