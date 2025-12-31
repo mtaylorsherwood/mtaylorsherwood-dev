@@ -39,7 +39,26 @@
                                 @if($loop->first)
                                     @php $year = intval(date('Y')) @endphp
                                     <tr>
-                                        <td colspan="2" class="text-right py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">{{ date('Y') }}</td>
+                                        @if(array_key_exists($year, $stats))
+                                            <td class="py-4 pr-3 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0 text-justify">
+                                                <p class="mb-2">Daily Target Reached: <strong>{{ $stats[date('Y')]['days'] }}</strong> days ({{ $stats[date('Y')]['percentage'] }}%)</p>
+                                                <p>
+                                                    <span class="mr-4">20 to 24: <strong>{{ $stats[$year]['minimum'] }}</strong>,</span>
+                                                    <span class="mr-4">25 to 49: <strong>{{ $stats[$year]['bronze'] }}</strong>,</span>
+                                                    <span class="mr-4">50 to 99: <strong>{{ $stats[$year]['silver'] }}</strong>,</span>
+                                                    <span class="mr-4">100 to 199: <strong>{{ $stats[$year]['gold'] }}</strong>,</span>
+                                                    200+: <strong>{{ $stats[$year]['platinum'] }}</strong>
+                                                </p>
+                                            </td>
+                                            <td class="text-right py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">
+                                            {{ date('Y') }}
+                                            </td>
+                                        @else
+                                            <td colspan="2" class="text-right py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">
+                                                {{ date('Y') }}
+                                            </td>
+                                        @endif
+
                                         <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $finished_by_year[$year]['count'] }}</td>
                                         <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ number_format($finished_by_year[$year]['pages']) }}</td>
                                     </tr>
