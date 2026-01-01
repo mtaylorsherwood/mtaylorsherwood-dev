@@ -56,7 +56,7 @@ final class BookshelfController extends Controller
             })
             ->map(function ($group) {
                 $pages = $group->sum(fn(array $b) => $b[2]);
-                self::calculatePageAward($pages, date('Y'));
+                self::calculatePageAward($pages, '2025');
                 return [
                     $pages,
                 ];

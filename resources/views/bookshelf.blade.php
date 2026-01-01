@@ -37,11 +37,11 @@
                             </tr>
                             @foreach($finished_books as $book)
                                 @if($loop->first)
-                                    @php $year = intval(date('Y')) @endphp
+                                    @php $year = 2025 @endphp
                                     <tr>
                                         @if(array_key_exists($year, $stats))
                                             <td class="py-4 pr-3 pl-4 text-sm whitespace-nowrap text-gray-900 sm:pl-0 text-justify">
-                                                <p class="mb-2">Daily Target Reached: <strong>{{ $stats[date('Y')]['days'] }}</strong> days ({{ $stats[date('Y')]['percentage'] }}%)</p>
+                                                <p class="mb-2">Daily Target Reached: <strong>{{ $stats[$year]['days'] }}</strong> days ({{ $stats[$year]['percentage'] }}%)</p>
                                                 <p>
                                                     <span class="mr-4">20 to 24: <strong>{{ $stats[$year]['minimum'] }}</strong>,</span>
                                                     <span class="mr-4">25 to 49: <strong>{{ $stats[$year]['bronze'] }}</strong>,</span>
@@ -51,16 +51,16 @@
                                                 </p>
                                             </td>
                                             <td class="text-right py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">
-                                            {{ date('Y') }}
+                                            {{ $year }}
                                             </td>
                                         @else
                                             <td colspan="2" class="text-right py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">
-                                                {{ date('Y') }}
+                                                {{ $year }}
                                             </td>
                                         @endif
 
-                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $finished_by_year[$year]['count'] }}</td>
-                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ number_format($finished_by_year[$year]['pages']) }}</td>
+                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $finished_by_year['2025']['count'] }}</td>
+                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ number_format($finished_by_year['2025']['pages']) }}</td>
                                     </tr>
                                 @endif
                                 @if(intval(Carbon::createFromFormat('Y-m-d', $book[3])->format('Y')) < $year)
@@ -68,8 +68,8 @@
                                     <tr>
                                         <td colspan="2"
                                             class="text-right py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">{{ Carbon::createFromFormat('Y-m-d', $book[3])->format('Y') }}</td>
-                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $finished_by_year[$year]['count'] }}</td>
-                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ number_format($finished_by_year[$year]['pages']) }}</td>
+                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $finished_by_year['2025']['count'] }}</td>
+                                        <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ number_format($finished_by_year['2025']['pages']) }}</td>
                                     </tr>
                                 @endif
                                 <tr>
