@@ -88,6 +88,7 @@ final class BookshelfController extends Controller
      */
     private static array $to_be_read = [
         ['Atomic Habits', 'James Clear', '2026-01-01', null, 253],
+        ['An Echo of Things to Come', 'James Islington', '2026-01-01', null, 716],
         ['Digital Minimalism', 'Cal Newport', '2026-01-01', null, 264],
         ['Lost Connections', 'Johann Hari', '2026-01-01', null, 319],
         ['Radical Candor', 'Kim Scott', '2026-01-01', null, 302],
