@@ -172,7 +172,6 @@ final class BookshelfController extends Controller
     private static array $currently_reading = [
         ['Clear Thinking', 'Shane Parrish', '2025-12-02', null, 255],
         ['Thirsty', 'Tom Gilbey', '2025-12-27', null, 278],
-        ['The Shadow of What Was Lost', 'James Islington', '2025-12-29', null, 693],
     ];
 
     /**
@@ -265,6 +264,7 @@ final class BookshelfController extends Controller
         ['Project Hail Mary', 'Andy Weir', '2025-11-23', '2025-12-01', 476],
         ['Yumi and the Nightmare Painter', 'Brandon Sanderson', '2025-12-02', '2025-12-14', 362],
         ['Dungeon Crawler Carl', 'Matt Dinniman', '2025-12-15', '2025-12-23', 427],
+        ['The Shadow of What Was Lost', 'James Islington', '2025-12-29', '2026-01-04', 693],
     ];
 
     private static array $reading_logs_2025 = [
