@@ -172,6 +172,7 @@ final class BookshelfController extends Controller
     private static array $currently_reading = [
         ['Clear Thinking', 'Shane Parrish', '2025-12-02', null, 255],
         ['Thirsty', 'Tom Gilbey', '2025-12-27', null, 278],
+        ['Site Reliability Engineering', 'Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy', '2025-12-05', null, 524],
     ];
 
     /**
