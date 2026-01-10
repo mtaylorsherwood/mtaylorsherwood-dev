@@ -87,8 +87,6 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
      */
     private static array $to_be_read = [
-        ['Atomic Habits', 'James Clear', '2026-01-01', null, 253],
-        ['An Echo of Things to Come', 'James Islington', '2026-01-01', null, 716],
         ['Digital Minimalism', 'Cal Newport', '2026-01-01', null, 264],
         ['Lost Connections', 'Johann Hari', '2026-01-01', null, 319],
         ['Radical Candor', 'Kim Scott', '2026-01-01', null, 302],
@@ -170,8 +168,9 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
-        ['Clear Thinking', 'Shane Parrish', '2025-12-02', null, 255],
         ['Site Reliability Engineering', 'Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy', '2025-12-05', null, 524],
+        ['Atomic Habits', 'James Clear', '2026-01-11', null, 253],
+        ['An Echo of Things to Come', 'James Islington', '2026-01-11', null, 716],
     ];
 
     /**
@@ -266,6 +265,7 @@ final class BookshelfController extends Controller
         ['Dungeon Crawler Carl', 'Matt Dinniman', '2025-12-15', '2025-12-23', 427],
         ['The Shadow of What Was Lost', 'James Islington', '2025-12-29', '2026-01-04', 693],
         ['Thirsty', 'Tom Gilbey', '2025-12-27', '2026-01-09', 278],
+        ['Clear Thinking', 'Shane Parrish', '2025-12-02', '2026-01-10', 255],
     ];
 
     private static array $reading_logs_2025 = [
