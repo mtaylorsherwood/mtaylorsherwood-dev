@@ -115,6 +115,7 @@ final class BookshelfController extends Controller
         ['How to Win Friends and Influence People', 'Dale Carnegie', null, null, 264],
         ['Hyperfocus: How to Work Less to Achieve More', 'Chris Bailey', null, null, 215],
         ['Hyperion', 'Dan Simmons', null, null, 473],
+        ['Intentional', 'Chris Bailey', null, null, 229],
         ['Katabasis', 'R. F. Kuang', null, null, 541],
         ['Leaders Eat Last', 'Simon Sinek', null, null, 305],
         ['Make Time', 'Jake Knapp, John Zeratsky', null, null, 256],
@@ -133,6 +134,7 @@ final class BookshelfController extends Controller
         ['The 4-Hour Work Week: ', 'Tim Ferriss', null, null, 376],
         ['The 5 Types of Wealth', 'Sahil Bloom', null, null, 369],
         ['The Black Prism', 'Brent Weeks', null, null, 735],
+        ['The Anxious Generation', 'Jonathan Haidt', null, null, 313],
         ['The Blade Itself', 'Joe Abercrombie', null, null, 515],
         ['The Body Keeps the Score', 'Bessel A. Van der Kolk', null, null, 428],
         ['The Exchange', 'John Grisham', null, null, 334],
@@ -169,7 +171,7 @@ final class BookshelfController extends Controller
      */
     private static array $currently_reading = [
         ['Site Reliability Engineering', 'Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy', '2025-12-05', null, 524],
-        ['Atomic Habits', 'James Clear', '2026-01-11', null, 253],
+        ['Atomic Habits', 'James Clear', '2026-01-13', null, 253],
         ['An Echo of Things to Come', 'James Islington', '2026-01-11', null, 716],
     ];
 
