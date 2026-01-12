@@ -72,11 +72,11 @@ final class BookshelfController extends Controller
             return;
         } elseif ($pages <= 24) {
             $this->stats[$year]['minimum'] += 1;
-        } elseif ($pages >= 25 && $pages < 50) {
+        } elseif ($pages < 50) {
             $this->stats[$year]['bronze'] += 1;
-        } elseif ($pages >= 50 && $pages < 100) {
+        } elseif ($pages < 100) {
             $this->stats[$year]['silver'] += 1;
-        } elseif ($pages >= 100 && $pages < 200) {
+        } elseif ($pages < 200) {
             $this->stats[$year]['gold'] += 1;
         } else {
             $this->stats[$year]['platinum'] += 1;
@@ -268,6 +268,9 @@ final class BookshelfController extends Controller
         ['Clear Thinking', 'Shane Parrish', '2025-12-02', '2026-01-10', 255],
     ];
 
+    /**
+     * @var array<int, array{0:string,1:string,2:int}>
+     */
     private static array $reading_logs_2025 = [
         ['Winter\'s Heart', '2025-01-01', 34],
         ['Slow Productivity', '2025-01-01', 31],
