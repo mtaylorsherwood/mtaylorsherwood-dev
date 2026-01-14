@@ -93,10 +93,14 @@
                                 <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ number_format($number_of_to_be_read_pages) }}</td>
                             </tr>
                             @foreach($to_be_read as $book)
+                                @if(!$loop->first && $to_be_read[($loop->index - 1)][2] !== null && $to_be_read[$loop->index][2] === null)
+                                    <tr>
+                                        <td colspan="4" class="text-right py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">&nbsp;</td>
+                                    </tr>
+                                @endif
                                 <tr>
                                     <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-0">{{ $book[0] }}</td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $book[1] }}</td>
-                                    <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ is_null($book[2]) ? '' : Carbon::createFromFormat('Y-m-d', $book[2])->format('M Y') }}</td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ is_null($book[2]) ? '' : Carbon::createFromFormat('Y-m-d', $book[2])->format('M Y') }}</td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{{ $book[4] }}</td>
                                 </tr>
