@@ -87,10 +87,10 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
      */
     private static array $to_be_read = [
-        ['Digital Minimalism', 'Cal Newport', '2026-01-01', null, 264],
-        ['Lost Connections', 'Johann Hari', '2026-01-01', null, 319],
-        ['Radical Candor', 'Kim Scott', '2026-01-01', null, 302],
-        ['The Name of the Wind', 'Patrick Rothfuss', '2026-01-01', null, 662],
+        ['Atomic Habits', 'James Clear', '2026-01-19', null, 253],
+        ['Radical Candor', 'Kim Scott', '2026-01-26', null, 302],
+        ['The Light of All That Falls', 'James Islington', '2026-02-01', null, 662],
+        ['The Name of the Wind', 'Patrick Rothfuss', '2026-02-15', null, 662],
         ['Wisdom Takes Work', 'Ryan Holiday', '2026-02-01', null, 382],
         ['"No Offence, But..."', 'Gina Martin', null, null, 310],
         ['168 Hours: You Have More Time Than You Think', 'Laura Vanderkam', null, null, 238],
@@ -118,6 +118,7 @@ final class BookshelfController extends Controller
         ['Intentional', 'Chris Bailey', null, null, 229],
         ['Katabasis', 'R. F. Kuang', null, null, 541],
         ['Leaders Eat Last', 'Simon Sinek', null, null, 305],
+        ['Lost Connections', 'Johann Hari', null, null, 319],
         ['Make Time', 'Jake Knapp, John Zeratsky', null, null, 256],
         ['Malice', 'John Gwynne', null, null, 627],
         ['Mastery', 'Robert Greene', null, null, 311],
@@ -170,8 +171,8 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
+        ['Digital Minimalism', 'Cal Newport', '2026-01-14', null, 264],
         ['Site Reliability Engineering', 'Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy', '2025-12-05', null, 524],
-        ['Atomic Habits', 'James Clear', '2026-01-13', null, 253],
         ['An Echo of Things to Come', 'James Islington', '2026-01-11', null, 716],
     ];
 
