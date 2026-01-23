@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Auth;
+namespace Tests\Feature\Auth;
 
 use App\Models\SensorReading;
 use Illuminate\Foundation\Testing\RefreshDatabase;
