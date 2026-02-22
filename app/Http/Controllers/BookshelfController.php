@@ -114,7 +114,6 @@ final class BookshelfController extends Controller
         ['Hyperfocus: How to Work Less to Achieve More', 'Chris Bailey', null, null, 215],
         ['Hyperion', 'Dan Simmons', null, null, 473],
         ['Intentional', 'Chris Bailey', null, null, 229],
-        ['Isles of the Emberdark', 'Brandon Sanderson', null, null, 399],
         ['Katabasis', 'R. F. Kuang', null, null, 541],
         ['Leaders Eat Last', 'Simon Sinek', null, null, 305],
         ['Lost Connections', 'Johann Hari', null, null, 319],
@@ -171,6 +170,7 @@ final class BookshelfController extends Controller
      */
     private static array $currently_reading = [
         ['Atomic Habits', 'James Clear', '2026-01-23', null, 253],
+        ['Isles of the Emberdark', 'Brandon Sanderson', '2026-02-16', null, 399],
         ['Site Reliability Engineering', 'Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy', '2025-12-05', null, 524],
         ['Wisdom Takes Work', 'Ryan Holiday', '2026-02-16', null, 382],
     ];
