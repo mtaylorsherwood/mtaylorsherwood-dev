@@ -87,18 +87,19 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
      */
     private static array $to_be_read = [
-        ['Radical Candor', 'Kim Scott', '2026-02-08', null, 302],
-        ['The Name of the Wind', 'Patrick Rothfuss', '2026-02-15', null, 662],
+        ['Before They Are Hanged', 'Joe Abercrombie', '2026-03-09', null, 570],
+        ['Radical Candor', 'Kim Scott', '2026-03-14', null, 302],
+        ['Last Argument of Kings', 'Joe Abercrombie', '2026-03-23', null, 695],
         ['"No Offence, But..."', 'Gina Martin', null, null, 310],
         ['168 Hours: You Have More Time Than You Think', 'Laura Vanderkam', null, null, 238],
         ['7 Habits of Highly Effective People', 'Stephen R Covey', null, null, 332],
         ['A Brief History of Black Holes And why Nearly Everything You Know about Them is Wrong', 'Becky Smethurst', null, null, 264],
         ['A Time for Mercy', 'John Grisham', null, null, 464],
         ['Anatomy of a Breakthrough', 'Adam Alter', null, null, 247],
-        ['Assassin\'s Apprentice', 'Robin Hobb', null, null, 392],
+        ["Assassin's Apprentice", 'Robin Hobb', null, null, 392],
         ['Be the Change A Toolkit for the Activist in You', 'Gina Martin', null, null, 283],
         ['Black Holes', 'Brian Cox, Jeffrey R. Forshaw', null, null, 263],
-        ['Carl\'s Doomsday Scenario', 'Matt Dinniman', null, null, 351],
+        ["Carl's Doomsday Scenario", 'Matt Dinniman', null, null, 351],
         ['City of Last Chances', 'Adrian Tchaikovsky', null, null, 498],
         ['Consider Phlebas', 'Iain M. Banks', null, null, 496],
         ['Crucial Conversations', 'Joseph Grenny, Kerry Patterson, Ron McMillan, Al Switzler, Emily Gregory', null, null, 268],
@@ -132,10 +133,10 @@ final class BookshelfController extends Controller
         ['Surrounded by Idiots', 'Thomas Erikson', null, null, 267],
         ['The 4-Hour Work Week: ', 'Tim Ferriss', null, null, 376],
         ['The 5 Types of Wealth', 'Sahil Bloom', null, null, 369],
-        ['The Black Prism', 'Brent Weeks', null, null, 735],
         ['The Anxious Generation', 'Jonathan Haidt', null, null, 313],
-        ['The Blade Itself', 'Joe Abercrombie', null, null, 515],
+        ['The Black Prism', 'Brent Weeks', null, null, 735],
         ['The Body Keeps the Score', 'Bessel A. Van der Kolk', null, null, 428],
+        ["The Dungeon Anarchist's Cookbook", 'Matt Dinniman', null, null, 512],
         ['The Exchange', 'John Grisham', null, null, 334],
         ['The Firm', 'John Grisham', null, null, 490],
         ['The Gunslinger', 'Stephen King', null, null, 238],
@@ -145,6 +146,7 @@ final class BookshelfController extends Controller
         ['The Innovation Stack', 'Jim McKelvey', null, null, 261],
         ['The Let Them Theory', 'Mel Robbins', null, null, 304],
         ['The Making of a Leader', 'Tom Young', null, null, 352],
+        ['The Name of the Wind', 'Patrick Rothfuss', null, null, 662],
         ['The Player of Games', 'Iain M. Banks', null, null, 308],
         ['The Power of Habit', 'Charles Duhigg', null, null, 286],
         ['The Priory of the Orange Tree', 'Samantha Shannon', null, null, 804],
@@ -170,8 +172,8 @@ final class BookshelfController extends Controller
      */
     private static array $currently_reading = [
         ['Atomic Habits', 'James Clear', '2026-01-23', null, 253],
-        ['Isles of the Emberdark', 'Brandon Sanderson', '2026-02-16', null, 399],
         ['Site Reliability Engineering', 'Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy', '2025-12-05', null, 524],
+        ['The Blade Itself', 'Joe Abercrombie', '2026-02-27', null, 515],
         ['Wisdom Takes Work', 'Ryan Holiday', '2026-02-16', null, 382],
     ];
 
@@ -272,6 +274,7 @@ final class BookshelfController extends Controller
         ['The 48 Laws of Power', 'Robert Greene', '2025-11-13', '2026-01-31', 430],
         ['An Echo of Things to Come', 'James Islington', '2026-01-11', '2026-01-31', 716],
         ['The Light of All That Falls', 'James Islington', '2026-02-01', '2026-02-15', 816],
+        ['Isles of the Emberdark', 'Brandon Sanderson', '2026-02-16', '2026-02-26', 399],
     ];
 
     /**
