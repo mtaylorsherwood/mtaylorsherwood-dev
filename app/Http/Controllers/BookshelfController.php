@@ -87,7 +87,6 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
      */
     private static array $to_be_read = [
-        ['Before They Are Hanged', 'Joe Abercrombie', '2026-03-09', null, 570],
         ['Radical Candor', 'Kim Scott', '2026-03-14', null, 302],
         ['Last Argument of Kings', 'Joe Abercrombie', '2026-03-23', null, 695],
         ['"No Offence, But..."', 'Gina Martin', null, null, 310],
@@ -172,8 +171,8 @@ final class BookshelfController extends Controller
      */
     private static array $currently_reading = [
         ['Atomic Habits', 'James Clear', '2026-01-23', null, 253],
+        ['Before They Are Hanged', 'Joe Abercrombie', '2026-03-10', null, 570],
         ['Site Reliability Engineering', 'Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy', '2025-12-05', null, 524],
-        ['The Blade Itself', 'Joe Abercrombie', '2026-02-27', null, 515],
         ['Wisdom Takes Work', 'Ryan Holiday', '2026-02-16', null, 382],
     ];
 
@@ -275,6 +274,7 @@ final class BookshelfController extends Controller
         ['An Echo of Things to Come', 'James Islington', '2026-01-11', '2026-01-31', 716],
         ['The Light of All That Falls', 'James Islington', '2026-02-01', '2026-02-15', 816],
         ['Isles of the Emberdark', 'Brandon Sanderson', '2026-02-16', '2026-02-26', 399],
+        ['The Blade Itself', 'Joe Abercrombie', '2026-02-27', '2026-03-09', 515],
     ];
 
     /**
