@@ -127,6 +127,7 @@ final class BookshelfController extends Controller
         ['Red Rising', 'Pierce Brown', null, null, 382],
         ['Revenge Of The Tipping Point', 'Malcolm Gladwell', null, null, 304],
         ['Scarcity Brain', 'Michael Easter', null, null, 288],
+        ['Stillness is the Key', 'Ryan Holiday', null, null, 264],
         ['Strong Ground', 'Brené Brown', null, null, 394],
         ['Supercommunicators', 'Charles Duhigg', null, null, 246],
         ['Surrounded by Idiots', 'Thomas Erikson', null, null, 267],
