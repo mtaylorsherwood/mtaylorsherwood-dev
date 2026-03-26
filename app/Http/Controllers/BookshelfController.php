@@ -9,6 +9,9 @@ use Illuminate\View\View;
 
 final class BookshelfController extends Controller
 {
+    /**
+     * @phpstan-ignore missingType.iterableValue
+     */
     private array $stats = [
         '2025' => [
             'days' => 0,
