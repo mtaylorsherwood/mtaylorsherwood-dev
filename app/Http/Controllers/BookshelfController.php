@@ -90,7 +90,7 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
      */
     private static array $to_be_read = [
-        ['Atomic Habits', 'James Clear', '2026-01-04', null, 253],
+        ['Atomic Habits', 'James Clear', '2026-04-01', null, 253],
         ['Radical Candor', 'Kim Scott', '2026-04-13', null, 302],
         ['Last Argument of Kings', 'Joe Abercrombie', '2026-04-01', null, 695],
         ['"No Offence, But..."', 'Gina Martin', null, null, 310],
