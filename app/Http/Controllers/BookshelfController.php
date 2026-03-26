@@ -87,8 +87,9 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
      */
     private static array $to_be_read = [
-        ['Radical Candor', 'Kim Scott', '2026-03-14', null, 302],
-        ['Last Argument of Kings', 'Joe Abercrombie', '2026-03-23', null, 695],
+        ['Atomic Habits', 'James Clear', '2026-01-04', null, 253],
+        ['Radical Candor', 'Kim Scott', '2026-04-13', null, 302],
+        ['Last Argument of Kings', 'Joe Abercrombie', '2026-04-01', null, 695],
         ['"No Offence, But..."', 'Gina Martin', null, null, 310],
         ['168 Hours: You Have More Time Than You Think', 'Laura Vanderkam', null, null, 238],
         ['7 Habits of Highly Effective People', 'Stephen R Covey', null, null, 332],
@@ -102,6 +103,7 @@ final class BookshelfController extends Controller
         ['City of Last Chances', 'Adrian Tchaikovsky', null, null, 498],
         ['Consider Phlebas', 'Iain M. Banks', null, null, 496],
         ['Crucial Conversations', 'Joseph Grenny, Kerry Patterson, Ron McMillan, Al Switzler, Emily Gregory', null, null, 268],
+        ['Designing Data Intensive Applications', 'Martin Kleppmann & Chris Riccomini', null, null, 600],
         ['Designing Your Life Build the Perfect Career, Step by Step', 'Bill Burnett, Dave Evans', null, null, 198],
         ['Drive', 'Daniel H. Pink', null, null, 215],
         ['Feel-Good Productivity', 'Ali Abdaal', null, null, 262],
@@ -127,6 +129,7 @@ final class BookshelfController extends Controller
         ['Red Rising', 'Pierce Brown', null, null, 382],
         ['Revenge Of The Tipping Point', 'Malcolm Gladwell', null, null, 304],
         ['Scarcity Brain', 'Michael Easter', null, null, 288],
+        ['Site Reliability Engineering', 'Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy', null, null, 524],
         ['Stillness is the Key', 'Ryan Holiday', null, null, 264],
         ['Strong Ground', 'Brené Brown', null, null, 394],
         ['Supercommunicators', 'Charles Duhigg', null, null, 246],
@@ -171,9 +174,7 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
-        ['Atomic Habits', 'James Clear', '2026-01-23', null, 253],
         ['Before They Are Hanged', 'Joe Abercrombie', '2026-03-10', null, 570],
-        ['Site Reliability Engineering', 'Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy', '2025-12-05', null, 524],
         ['Wisdom Takes Work', 'Ryan Holiday', '2026-02-16', null, 382],
     ];
 
