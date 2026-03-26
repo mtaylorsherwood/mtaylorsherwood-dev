@@ -12,9 +12,9 @@
     "license": "proprietary",
     "require": {
         "php": "^8.4",
-        "laravel/framework": "^12.0",
+        "laravel/framework": "^13.0",
         "laravel/nightwatch": "^1.11",
-        "laravel/tinker": "^2.9",
+        "laravel/tinker": "^3.0",
         "livewire/livewire": "^3.4",
         "livewire/volt": "^1.0",
         "spatie/laravel-login-link": "^1.6"
@@ -27,7 +27,7 @@
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
-        "phpunit/phpunit": "^11.0.1"
+        "phpunit/phpunit": "^12.0"
     },
     "autoload": {
         "psr-4": {
