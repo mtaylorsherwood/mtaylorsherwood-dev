@@ -90,9 +90,9 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
      */
     private static array $to_be_read = [
-        ['Atomic Habits', 'James Clear', '2026-04-01', null, 253],
-        ['Radical Candor', 'Kim Scott', '2026-04-13', null, 302],
-        ['Last Argument of Kings', 'Joe Abercrombie', '2026-04-01', null, 695],
+        ['Radical Candor', 'Kim Scott', '2026-05-11', null, 302],
+        ['Hyperion', 'Dan Simmons', '2026-05-18', null, 473],
+        ['Stillness is the Key', 'Ryan Holiday', '2026-05-18', null, 264],
         ['"No Offence, But..."', 'Gina Martin', null, null, 310],
         ['168 Hours: You Have More Time Than You Think', 'Laura Vanderkam', null, null, 238],
         ['7 Habits of Highly Effective People', 'Stephen R Covey', null, null, 332],
@@ -106,7 +106,6 @@ final class BookshelfController extends Controller
         ['City of Last Chances', 'Adrian Tchaikovsky', null, null, 498],
         ['Consider Phlebas', 'Iain M. Banks', null, null, 496],
         ['Crucial Conversations', 'Joseph Grenny, Kerry Patterson, Ron McMillan, Al Switzler, Emily Gregory', null, null, 268],
-        ['Designing Data Intensive Applications', 'Martin Kleppmann & Chris Riccomini', null, null, 600],
         ['Designing Your Life Build the Perfect Career, Step by Step', 'Bill Burnett, Dave Evans', null, null, 198],
         ['Drive', 'Daniel H. Pink', null, null, 215],
         ['Feel-Good Productivity', 'Ali Abdaal', null, null, 262],
@@ -117,8 +116,8 @@ final class BookshelfController extends Controller
         ['How to Do Nothing: Resisting the Attention Economy', 'Jenny Odell', null, null, 204],
         ['How to Win Friends and Influence People', 'Dale Carnegie', null, null, 264],
         ['Hyperfocus: How to Work Less to Achieve More', 'Chris Bailey', null, null, 215],
-        ['Hyperion', 'Dan Simmons', null, null, 473],
         ['Intentional', 'Chris Bailey', null, null, 229],
+        ['Jade City', 'Fonda Lee', null, null, 495],
         ['Katabasis', 'R. F. Kuang', null, null, 541],
         ['Leaders Eat Last', 'Simon Sinek', null, null, 305],
         ['Lost Connections', 'Johann Hari', null, null, 319],
@@ -127,13 +126,13 @@ final class BookshelfController extends Controller
         ['Mastery', 'Robert Greene', null, null, 311],
         ['Multipliers', 'Liz Wiseman', null, null, 284],
         ['Never Split the Difference', 'Chris Voss', null, null, 245],
+        ['Nightwatch', 'Terry Pratchett', null, null, 475],
         ['Night Manager', 'John Le Carré', null, null, 473],
         ['No Bullsh*t Leadership', 'Chris Hirst', null, null, 209],
         ['Red Rising', 'Pierce Brown', null, null, 382],
         ['Revenge Of The Tipping Point', 'Malcolm Gladwell', null, null, 304],
         ['Scarcity Brain', 'Michael Easter', null, null, 288],
         ['Site Reliability Engineering', 'Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy', null, null, 524],
-        ['Stillness is the Key', 'Ryan Holiday', null, null, 264],
         ['Strong Ground', 'Brené Brown', null, null, 394],
         ['Supercommunicators', 'Charles Duhigg', null, null, 246],
         ['Surrounded by Idiots', 'Thomas Erikson', null, null, 267],
@@ -142,12 +141,15 @@ final class BookshelfController extends Controller
         ['The Anxious Generation', 'Jonathan Haidt', null, null, 313],
         ['The Black Prism', 'Brent Weeks', null, null, 735],
         ['The Body Keeps the Score', 'Bessel A. Van der Kolk', null, null, 428],
+        ['The Creative Act', 'Rick Rubin', null, null, 415],
+        ["The Dose Effect", 'T. J. Power', null, null, 299],
         ["The Dungeon Anarchist's Cookbook", 'Matt Dinniman', null, null, 512],
         ['The Exchange', 'John Grisham', null, null, 334],
         ['The Firm', 'John Grisham', null, null, 490],
         ['The Gunslinger', 'Stephen King', null, null, 238],
         ['The Happiness Hypothesis', 'Jonathan Haidt', null, null, 243],
         ['The Happy Index', 'James Timpson', null, null, 284],
+        ['The Hobbit', 'J. R. R. Tolkien', null, null, 282],
         ['The Infinite Game', 'Simon Sinek', null, null, 224],
         ['The Innovation Stack', 'Jim McKelvey', null, null, 261],
         ['The Let Them Theory', 'Mel Robbins', null, null, 304],
@@ -177,8 +179,10 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
-        ['Before They Are Hanged', 'Joe Abercrombie', '2026-03-10', null, 570],
-        ['Wisdom Takes Work', 'Ryan Holiday', '2026-02-16', null, 382],
+        ['Last Argument of Kings', 'Joe Abercrombie', '2026-04-30', null, 695],
+        ['Atomic Habits', 'James Clear', '2026-04-30', null, 253],
+        ['The Way of Excellence', 'Brad Stulberg', '2026-05-01', null, 259],
+        ['Designing Data Intensive Applications', 'Martin Kleppmann & Chris Riccomini', '2026-05-01', null, 600],
     ];
 
     /**
@@ -280,6 +284,8 @@ final class BookshelfController extends Controller
         ['The Light of All That Falls', 'James Islington', '2026-02-01', '2026-02-15', 816],
         ['Isles of the Emberdark', 'Brandon Sanderson', '2026-02-16', '2026-02-26', 399],
         ['The Blade Itself', 'Joe Abercrombie', '2026-02-27', '2026-03-09', 515],
+        ['Wisdom Takes Work', 'Ryan Holiday', '2026-02-16', '2026-04-29', 382],
+        ['Before They Are Hanged', 'Joe Abercrombie', '2026-03-10', '2026-04-30', 570],
     ];
 
     /**
