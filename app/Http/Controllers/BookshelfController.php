@@ -90,9 +90,8 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string|null,3:null,4:int}>
      */
     private static array $to_be_read = [
-        ['Radical Candor', 'Kim Scott', '2026-05-11', null, 302],
-        ['Hyperion', 'Dan Simmons', '2026-05-18', null, 473],
-        ['Stillness is the Key', 'Ryan Holiday', '2026-05-18', null, 264],
+        ['Radical Candor', 'Kim Scott', '2026-05-20', null, 302],
+        ['Stillness is the Key', 'Ryan Holiday', '2026-06-01', null, 264],
         ['"No Offence, But..."', 'Gina Martin', null, null, 310],
         ['168 Hours: You Have More Time Than You Think', 'Laura Vanderkam', null, null, 238],
         ['7 Habits of Highly Effective People', 'Stephen R Covey', null, null, 332],
@@ -179,9 +178,8 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
-        ['Last Argument of Kings', 'Joe Abercrombie', '2026-04-30', null, 695],
+        ['Hyperion', 'Dan Simmons', '2026-05-18', null, 473],
         ['Atomic Habits', 'James Clear', '2026-04-30', null, 253],
-        ['The Way of Excellence', 'Brad Stulberg', '2026-05-01', null, 259],
         ['Designing Data Intensive Applications', 'Martin Kleppmann & Chris Riccomini', '2026-05-01', null, 600],
     ];
 
@@ -286,6 +284,8 @@ final class BookshelfController extends Controller
         ['The Blade Itself', 'Joe Abercrombie', '2026-02-27', '2026-03-09', 515],
         ['Wisdom Takes Work', 'Ryan Holiday', '2026-02-16', '2026-04-29', 382],
         ['Before They Are Hanged', 'Joe Abercrombie', '2026-03-10', '2026-04-30', 570],
+        ['The Way of Excellence', 'Brad Stulberg', '2026-05-01', '2026-05-10', 259],
+        ['Last Argument of Kings', 'Joe Abercrombie', '2026-04-30', '2026-05-18', 670],
     ];
 
     /**
