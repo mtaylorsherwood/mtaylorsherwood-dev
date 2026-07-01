@@ -104,6 +104,7 @@ final class BookshelfController extends Controller
         ['City of Last Chances', 'Adrian Tchaikovsky', null, null, 498],
         ['Consider Phlebas', 'Iain M. Banks', null, null, 496],
         ['Crucial Conversations', 'Joseph Grenny, Kerry Patterson, Ron McMillan, Al Switzler, Emily Gregory', null, null, 268],
+        ['Designing Data Intensive Applications', 'Martin Kleppmann & Chris Riccomini', null, null, 600],
         ['Designing Your Life Build the Perfect Career, Step by Step', 'Bill Burnett, Dave Evans', null, null, 198],
         ['Drive', 'Daniel H. Pink', null, null, 215],
         ['Feel-Good Productivity', 'Ali Abdaal', null, null, 262],
@@ -180,7 +181,6 @@ final class BookshelfController extends Controller
     private static array $currently_reading = [
         ['Radical Candor', 'Kim Scott', '2026-06-14', null, 302],
         ['Hyperion', 'Dan Simmons', '2026-05-18', null, 473],
-        ['Designing Data Intensive Applications', 'Martin Kleppmann & Chris Riccomini', '2026-05-01', null, 600],
     ];
 
     /**
