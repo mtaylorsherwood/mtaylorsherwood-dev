@@ -180,7 +180,6 @@ final class BookshelfController extends Controller
      */
     private static array $currently_reading = [
         ['Radical Candor', 'Kim Scott', '2026-06-14', null, 302],
-        ['Hyperion', 'Dan Simmons', '2026-05-18', null, 473],
         ['The Devils', 'Joe Abercrombie', '2026-07-01', null, 560],
     ];
 
@@ -289,6 +288,7 @@ final class BookshelfController extends Controller
         ['Last Argument of Kings', 'Joe Abercrombie', '2026-04-30', '2026-05-18', 670],
         ['Atomic Habits', 'James Clear', '2026-04-30', '2026-05-31', 253],
         ['Stillness is the Key', 'Ryan Holiday', '2026-06-01', '2026-06-14', 264],
+        ['Hyperion', 'Dan Simmons', '2026-05-18', '2026-07-04', 473],
     ];
 
     /**
