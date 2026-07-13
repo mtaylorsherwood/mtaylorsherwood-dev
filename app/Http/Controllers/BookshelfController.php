@@ -109,7 +109,6 @@ final class BookshelfController extends Controller
         ['Drive', 'Daniel H. Pink', null, null, 215],
         ['Feel-Good Productivity', 'Ali Abdaal', null, null, 262],
         ['Getting Things Done', 'David Allen', null, null, 301],
-        ['Hidden Potential', 'Adam Grant', null, null, 242],
         ['How to Calm Your Mind Finding Peace and Productivity in Anxious Times', 'Chris Bailey', null, null, 232],
         ['How to Change Your Life Lessons on Transformation from the World of High Performance', 'Jake Humphrey, Damian Hughes', null, null, 220],
         ['How to Do Nothing: Resisting the Attention Economy', 'Jenny Odell', null, null, 204],
@@ -129,7 +128,7 @@ final class BookshelfController extends Controller
         ['Nightwatch', 'Terry Pratchett', null, null, 475],
         ['Night Manager', 'John Le Carré', null, null, 473],
         ['No Bullsh*t Leadership', 'Chris Hirst', null, null, 209],
-        ['Red Rising', 'Pierce Brown', null, null, 382],
+        ['Radical Candor', 'Kim Scott', null, null, 302],
         ['Revenge Of The Tipping Point', 'Malcolm Gladwell', null, null, 304],
         ['Scarcity Brain', 'Michael Easter', null, null, 288],
         ['Site Reliability Engineering', 'Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy', null, null, 524],
@@ -179,8 +178,8 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
-        ['Radical Candor', 'Kim Scott', '2026-06-14', null, 302],
-        ['The Devils', 'Joe Abercrombie', '2026-07-01', null, 560],
+        ['Red Rising', 'Pierce Brown', '2026-07-12', null, 382],
+        ['Hidden Potential', 'Adam Grant', '2026-07-13', null, 242],
     ];
 
     /**
@@ -289,6 +288,7 @@ final class BookshelfController extends Controller
         ['Atomic Habits', 'James Clear', '2026-04-30', '2026-05-31', 253],
         ['Stillness is the Key', 'Ryan Holiday', '2026-06-01', '2026-06-14', 264],
         ['Hyperion', 'Dan Simmons', '2026-05-18', '2026-07-04', 473],
+        ['The Devils', 'Joe Abercrombie', '2026-07-01', '2026-07-11', 560],
     ];
 
     /**
