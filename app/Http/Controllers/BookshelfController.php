@@ -113,8 +113,6 @@ final class BookshelfController extends Controller
         ['How to Change Your Life Lessons on Transformation from the World of High Performance', 'Jake Humphrey, Damian Hughes', null, null, 220],
         ['How to Do Nothing: Resisting the Attention Economy', 'Jenny Odell', null, null, 204],
         ['How to Win Friends and Influence People', 'Dale Carnegie', null, null, 264],
-        ['Hyperfocus: How to Work Less to Achieve More', 'Chris Bailey', null, null, 215],
-        ['Inside The Box', 'David Epstein', null, null, 234],
         ['Intentional', 'Chris Bailey', null, null, 229],
         ['Jade City', 'Fonda Lee', null, null, 495],
         ['Katabasis', 'R. F. Kuang', null, null, 541],
@@ -123,6 +121,7 @@ final class BookshelfController extends Controller
         ['Make Time', 'Jake Knapp, John Zeratsky', null, null, 256],
         ['Malice', 'John Gwynne', null, null, 627],
         ['Mastery', 'Robert Greene', null, null, 311],
+        ['Morning Star', 'Pierce Brown', null, null, 515],
         ['Multipliers', 'Liz Wiseman', null, null, 284],
         ['Never Split the Difference', 'Chris Voss', null, null, 245],
         ['Nightwatch', 'Terry Pratchett', null, null, 475],
@@ -178,8 +177,8 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
-        ['Red Rising', 'Pierce Brown', '2026-07-12', null, 382],
-        ['Hidden Potential', 'Adam Grant', '2026-07-13', null, 242],
+        ['Golden Son', 'Pierce Brown', '2026-07-18', null, 442],
+        ['Inside The Box', 'David Epstein', '2026-07-23', null, 234],
     ];
 
     /**
@@ -289,6 +288,9 @@ final class BookshelfController extends Controller
         ['Stillness is the Key', 'Ryan Holiday', '2026-06-01', '2026-06-14', 264],
         ['Hyperion', 'Dan Simmons', '2026-05-18', '2026-07-04', 473],
         ['The Devils', 'Joe Abercrombie', '2026-07-01', '2026-07-11', 560],
+        ['Red Rising', 'Pierce Brown', '2026-07-12', '2026-07-18', 382],
+        ['Hidden Potential', 'Adam Grant', '2026-07-13', '2026-07-18', 242],
+        ['Hyperfocus', 'Chris Bailey', '2026-07-18', '2026-07-23', 215],
     ];
 
     /**
