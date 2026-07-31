@@ -121,7 +121,6 @@ final class BookshelfController extends Controller
         ['Make Time', 'Jake Knapp, John Zeratsky', null, null, 256],
         ['Malice', 'John Gwynne', null, null, 627],
         ['Mastery', 'Robert Greene', null, null, 311],
-        ['Morning Star', 'Pierce Brown', null, null, 515],
         ['Multipliers', 'Liz Wiseman', null, null, 284],
         ['Never Split the Difference', 'Chris Voss', null, null, 245],
         ['Nightwatch', 'Terry Pratchett', null, null, 475],
@@ -154,7 +153,6 @@ final class BookshelfController extends Controller
         ['The Making of a Leader', 'Tom Young', null, null, 352],
         ['The Name of the Wind', 'Patrick Rothfuss', null, null, 662],
         ['The Player of Games', 'Iain M. Banks', null, null, 308],
-        ['The Power of Habit', 'Charles Duhigg', null, null, 286],
         ['The Priory of the Orange Tree', 'Samantha Shannon', null, null, 804],
         ['The Shadow of the Gods', 'John Gwynne', null, null, 478],
         ['The Spy Who Came in From The Cold', 'John le Carré', null, null, 253],
@@ -177,8 +175,8 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
-        ['Golden Son', 'Pierce Brown', '2026-07-18', null, 442],
-        ['Inside The Box', 'David Epstein', '2026-07-23', null, 234],
+        ['Morning Star', 'Pierce Brown', '2026-07-31', null, 515],
+        ['The Power of Habit', 'Charles Duhigg', '2026-07-31', null, 286],
     ];
 
     /**
@@ -291,6 +289,8 @@ final class BookshelfController extends Controller
         ['Red Rising', 'Pierce Brown', '2026-07-12', '2026-07-18', 382],
         ['Hidden Potential', 'Adam Grant', '2026-07-13', '2026-07-18', 242],
         ['Hyperfocus', 'Chris Bailey', '2026-07-18', '2026-07-23', 215],
+        ['Golden Son', 'Pierce Brown', '2026-07-18', '2026-07-30', 442],
+        ['Inside The Box', 'David Epstein', '2026-07-23', '2026-07-28', 234],
     ];
 
     /**
