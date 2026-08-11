@@ -175,7 +175,6 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
-        ['Morning Star', 'Pierce Brown', '2026-07-31', null, 515],
         ['The Power of Habit', 'Charles Duhigg', '2026-07-31', null, 286],
     ];
 
@@ -291,6 +290,7 @@ final class BookshelfController extends Controller
         ['Hyperfocus', 'Chris Bailey', '2026-07-18', '2026-07-23', 215],
         ['Golden Son', 'Pierce Brown', '2026-07-18', '2026-07-30', 442],
         ['Inside The Box', 'David Epstein', '2026-07-23', '2026-07-28', 234],
+        ['Morning Star', 'Pierce Brown', '2026-07-31', '2026-08-11', 515],
     ];
 
     /**
