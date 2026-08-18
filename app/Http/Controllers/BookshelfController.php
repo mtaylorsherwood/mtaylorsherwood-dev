@@ -107,6 +107,7 @@ final class BookshelfController extends Controller
         ['Designing Data Intensive Applications', 'Martin Kleppmann & Chris Riccomini', null, null, 600],
         ['Designing Your Life Build the Perfect Career, Step by Step', 'Bill Burnett, Dave Evans', null, null, 198],
         ['Drive', 'Daniel H. Pink', null, null, 215],
+        ['East of Eden', 'John Steinbeck', null, null, 602],
         ['Feel-Good Productivity', 'Ali Abdaal', null, null, 262],
         ['Getting Things Done', 'David Allen', null, null, 301],
         ['How to Calm Your Mind Finding Peace and Productivity in Anxious Times', 'Chris Bailey', null, null, 232],
@@ -114,12 +115,14 @@ final class BookshelfController extends Controller
         ['How to Do Nothing: Resisting the Attention Economy', 'Jenny Odell', null, null, 204],
         ['How to Win Friends and Influence People', 'Dale Carnegie', null, null, 264],
         ['Intentional', 'Chris Bailey', null, null, 229],
+        ['Iron Gold', 'Pierce Brown', null, null, 600],
         ['Jade City', 'Fonda Lee', null, null, 495],
         ['Katabasis', 'R. F. Kuang', null, null, 541],
         ['Leaders Eat Last', 'Simon Sinek', null, null, 305],
         ['Lost Connections', 'Johann Hari', null, null, 319],
         ['Make Time', 'Jake Knapp, John Zeratsky', null, null, 256],
         ['Malice', 'John Gwynne', null, null, 627],
+        ['Man\'s Search for Meaning', 'Viktor E Frankl', null, null, 154],
         ['Mastery', 'Robert Greene', null, null, 311],
         ['Multipliers', 'Liz Wiseman', null, null, 284],
         ['Never Split the Difference', 'Chris Voss', null, null, 245],
@@ -142,6 +145,7 @@ final class BookshelfController extends Controller
         ["The Dose Effect", 'T. J. Power', null, null, 299],
         ["The Dungeon Anarchist's Cookbook", 'Matt Dinniman', null, null, 512],
         ['The Exchange', 'John Grisham', null, null, 334],
+        ['The Fall of Hyperion', 'Dan Simmons', null, null, 584],
         ['The Firm', 'John Grisham', null, null, 490],
         ['The Gunslinger', 'Stephen King', null, null, 238],
         ['The Happiness Hypothesis', 'Jonathan Haidt', null, null, 243],
@@ -156,7 +160,6 @@ final class BookshelfController extends Controller
         ['The Priory of the Orange Tree', 'Samantha Shannon', null, null, 804],
         ['The Shadow of the Gods', 'John Gwynne', null, null, 478],
         ['The Spy Who Came in From The Cold', 'John le Carré', null, null, 253],
-        ['The Stand', 'Stephen King', null, null, 1325],
         ['The Three-Body Problem', 'Cixin Liu', null, null, 424],
         ['The Tipping Point', 'Malcolm Gladwell', null, null, 259],
         ['The Will of the Many', 'James Islington', null, null, 684],
@@ -175,7 +178,7 @@ final class BookshelfController extends Controller
      * @var array<int, array{0:string,1:string,2:string,3:null,4:int}>
      */
     private static array $currently_reading = [
-        ['The Power of Habit', 'Charles Duhigg', '2026-07-31', null, 286],
+        ['The Stand', 'Stephen King', '2026-08-12', null, 1325],
     ];
 
     /**
@@ -291,6 +294,7 @@ final class BookshelfController extends Controller
         ['Golden Son', 'Pierce Brown', '2026-07-18', '2026-07-30', 442],
         ['Inside The Box', 'David Epstein', '2026-07-23', '2026-07-28', 234],
         ['Morning Star', 'Pierce Brown', '2026-07-31', '2026-08-11', 515],
+        ['The Power of Habit', 'Charles Duhigg', '2026-07-31', '2026-08-17', 286],
     ];
 
     /**
