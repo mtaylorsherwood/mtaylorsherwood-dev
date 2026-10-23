@@ -19,6 +19,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Images Disk
+    |--------------------------------------------------------------------------
+    |
+    | The disk used for uploaded post/project images. Defaults to the "r2"
+    | Cloudflare disk; set IMAGES_DISK=public in local dev to store images on
+    | disk instead of requiring live Cloudflare credentials.
+    |
+    */
+
+    'images_disk' => env('IMAGES_DISK', 'r2'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Filesystem Disks
     |--------------------------------------------------------------------------
     |
@@ -34,19 +47,26 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => storage_path('app/private'),
+            'serve' => true,
             'throw' => false,
+            'report' => false,
         ],
 
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => rtrim((string) env('APP_URL', 'http://localhost'), '/').'/storage',
             'visibility' => 'public',
             'throw' => false,
+            'report' => false,
         ],
 
-        's3' => [
+        // Cloudflare R2, either provisioned directly or as a Laravel Cloud
+        // "Laravel Object Storage" bucket (which is R2 under the hood and
+        // injects these same AWS_* variable names). R2 manages visibility
+        // at the bucket level, not per-object, so no `visibility` key here.
+        'r2' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
             'secret' => env('AWS_SECRET_ACCESS_KEY'),
@@ -56,6 +76,7 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
+            'report' => false,
         ],
 
     ],

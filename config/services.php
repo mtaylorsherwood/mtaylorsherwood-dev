@@ -10,14 +10,18 @@ return [
     |--------------------------------------------------------------------------
     |
     | This file is for storing the credentials for third party services such
-    | as Mailgun, Postmark, AWS and more. This file provides the de facto
+    | as Resend, Postmark, AWS, and more. This file provides the de facto
     | location for this type of information, allowing packages to have
     | a conventional file to locate the various service credentials.
     |
     */
 
     'postmark' => [
-        'token' => env('POSTMARK_TOKEN'),
+        'key' => env('POSTMARK_API_KEY'),
+    ],
+
+    'resend' => [
+        'key' => env('RESEND_API_KEY'),
     ],
 
     'ses' => [
@@ -26,8 +30,12 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
-    'resend' => [
-        'key' => env('RESEND_KEY'),
+    // The Cloudflare-proxied custom domain connected to the R2 bucket, used
+    // to build on-the-fly image transformation URLs (resize/format/cache at
+    // the edge) via Cloudflare's /cdn-cgi/image/ path. See
+    // https://developers.cloudflare.com/images/transform-images/
+    'cloudflare_images' => [
+        'domain' => env('CLOUDFLARE_IMAGES_DOMAIN'),
     ],
 
     'slack' => [
@@ -37,7 +45,4 @@ return [
         ],
     ],
 
-    'cloudflare_analytics' => [
-        'key' => env('CLOUDFLARE_ANALYTICS_KEY'),
-    ],
 ];

@@ -1,18 +1,168 @@
 @import 'tailwindcss';
 
-@plugin '@tailwindcss/forms';
+@import 'tw-animate-css';
+
+@import './prism.css' layer(components);
+
+@plugin '@tailwindcss/typography';
+
+/* Prose colour scale for the Spotlight article layout... */
+@config '../../typography.ts';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
+@custom-variant dark (&:is(.dark *));
+
+/* Site colour palette. */
 @theme {
-  --font-sans:
-    Figtree, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-spicy-paprika-50: #fcede8;
+    --color-spicy-paprika-100: #f9dbd2;
+    --color-spicy-paprika-200: #f3b7a5;
+    --color-spicy-paprika-300: #ed9378;
+    --color-spicy-paprika-400: #e86f4a;
+    --color-spicy-paprika-500: #e24b1d;
+    --color-spicy-paprika-600: #b53c17;
+    --color-spicy-paprika-700: #872d12;
+    --color-spicy-paprika-800: #5a1e0c;
+    --color-spicy-paprika-900: #2d0f06;
+    --color-spicy-paprika-950: #200b04;
+
+    --color-baltic-blue-50: #ebf3fa;
+    --color-baltic-blue-100: #d6e6f5;
+    --color-baltic-blue-200: #aecdea;
+    --color-baltic-blue-300: #85b4e0;
+    --color-baltic-blue-400: #5d9bd5;
+    --color-baltic-blue-500: #3482cb;
+    --color-baltic-blue-600: #2a68a2;
+    --color-baltic-blue-700: #1f4e7a;
+    --color-baltic-blue-800: #153451;
+    --color-baltic-blue-900: #0a1a29;
+    --color-baltic-blue-950: #07121c;
+
+    --color-turf-green-50: #edf8f2;
+    --color-turf-green-100: #dbf0e4;
+    --color-turf-green-200: #b6e2c9;
+    --color-turf-green-300: #92d3ae;
+    --color-turf-green-400: #6dc593;
+    --color-turf-green-500: #49b678;
+    --color-turf-green-600: #3a9260;
+    --color-turf-green-700: #2c6d48;
+    --color-turf-green-800: #1d4930;
+    --color-turf-green-900: #0f2418;
+    --color-turf-green-950: #0a1a11;
+
+    --color-ash-grey-50: #f4f3f1;
+    --color-ash-grey-100: #e8e8e3;
+    --color-ash-grey-200: #d2d0c6;
+    --color-ash-grey-300: #bbb9aa;
+    --color-ash-grey-400: #a4a28e;
+    --color-ash-grey-500: #8e8a71;
+    --color-ash-grey-600: #716f5b;
+    --color-ash-grey-700: #555344;
+    --color-ash-grey-800: #39372d;
+    --color-ash-grey-900: #1c1c17;
+    --color-ash-grey-950: #141310;
+
+    --color-espresso-50: #f7f0ee;
+    --color-espresso-100: #efe1dc;
+    --color-espresso-200: #dec2ba;
+    --color-espresso-300: #cea497;
+    --color-espresso-400: #be8574;
+    --color-espresso-500: #ad6752;
+    --color-espresso-600: #8b5241;
+    --color-espresso-700: #683e31;
+    --color-espresso-800: #452921;
+    --color-espresso-900: #231510;
+    --color-espresso-950: #180e0b;
+}
+
+/* Spotlight template type scale... */
+@theme {
+    --text-xs: 0.8125rem;
+    --text-xs--line-height: 1.5rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: 1.5rem;
+    --text-base: 1rem;
+    --text-base--line-height: 1.75rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: 1.75rem;
+    --text-xl: 1.25rem;
+    --text-xl--line-height: 2rem;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: 2rem;
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: 2.25rem;
+    --text-4xl: 2rem;
+    --text-4xl--line-height: 2.5rem;
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 3.5rem;
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
+    --text-7xl: 4.5rem;
+    --text-7xl--line-height: 1;
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
+    --text-9xl: 8rem;
+    --text-9xl--line-height: 1;
+}
+
+@theme inline {
+    --font-sans:
+        Instrument Sans, ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+
+    --radius-lg: var(--radius);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+
+    --color-sidebar: var(--sidebar-background);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
 }
 
 /*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
   looks the same as it did with Tailwind CSS v3.
 
@@ -20,11 +170,74 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+@layer utilities {
+    body,
+    html {
+        --font-sans:
+            'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
+            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+            'Noto Color Emoji';
+    }
+}
+
+/*
+  This site is dark mode only, so there's a single palette here rather than
+  a :root/.dark pair. Roles: spicy-paprika is the primary brand accent,
+  baltic-blue the secondary accent, turf-green a tertiary accent, ash-grey
+  the neutral scale (text/borders/muted surfaces), and espresso the warm
+  deep tone used for elevated surfaces (cards, popovers, the sidebar).
+*/
+:root {
+    --background: var(--color-ash-grey-950);
+    --foreground: var(--color-ash-grey-100);
+    --card: var(--color-espresso-950);
+    --card-foreground: var(--color-ash-grey-100);
+    --popover: var(--color-espresso-950);
+    --popover-foreground: var(--color-ash-grey-100);
+    --primary: var(--color-spicy-paprika-500);
+    --primary-foreground: var(--color-spicy-paprika-50);
+    --secondary: var(--color-baltic-blue-900);
+    --secondary-foreground: var(--color-baltic-blue-100);
+    --muted: var(--color-ash-grey-800);
+    --muted-foreground: var(--color-ash-grey-400);
+    --accent: var(--color-turf-green-900);
+    --accent-foreground: var(--color-turf-green-100);
+    --destructive: var(--color-spicy-paprika-600);
+    --destructive-foreground: var(--color-spicy-paprika-50);
+    --border: var(--color-ash-grey-700);
+    --input: var(--color-ash-grey-700);
+    --ring: var(--color-spicy-paprika-500);
+    --chart-1: var(--color-spicy-paprika-500);
+    --chart-2: var(--color-baltic-blue-500);
+    --chart-3: var(--color-turf-green-500);
+    --chart-4: var(--color-espresso-400);
+    --chart-5: var(--color-ash-grey-400);
+    --radius: 0.5rem;
+    --sidebar-background: var(--color-espresso-950);
+    --sidebar-foreground: var(--color-ash-grey-200);
+    --sidebar-primary: var(--color-spicy-paprika-500);
+    --sidebar-primary-foreground: var(--color-spicy-paprika-50);
+    --sidebar-accent: var(--color-ash-grey-800);
+    --sidebar-accent-foreground: var(--color-ash-grey-100);
+    --sidebar-border: var(--color-ash-grey-800);
+    --sidebar-ring: var(--color-spicy-paprika-500);
+    --sidebar: var(--color-espresso-950);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
 }

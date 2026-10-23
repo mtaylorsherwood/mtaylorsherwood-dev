@@ -1,0 +1,15 @@
+.git
+.idea
+.ai
+.claude
+.junie
+node_modules
+vendor
+storage/framework/cache/data
+storage/framework/sessions
+storage/framework/testing
+storage/framework/views
+storage/logs
+public/build
+public/hot
+database/database.sqlite

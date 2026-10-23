@@ -1,12 +1,20 @@
 includes:
-  - vendor/larastan/larastan/extension.neon
-  - vendor/nesbot/carbon/extension.neon
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
 
 parameters:
+    paths:
+        - app/
+        - bootstrap/app.php
+        - config/
+        - database/
+        - routes/
 
-  paths:
-    - app/
+    level: max
 
-  level: 9
-
-  tmpDir: /tmp/phpstan
+    ignoreErrors:
+        -
+            # Router::inertia() is a macro from inertiajs/inertia-laravel without a declared
+            # return type, so PHPStan can't infer the Route instance returned for chaining.
+            message: '#^Cannot call method name\(\) on mixed\.$#'
+            path: routes/web.php

@@ -1,0 +1,15 @@
+export { default as ArrowDownIcon } from './ArrowDownIcon.vue';
+export { default as ArrowLeftIcon } from './ArrowLeftIcon.vue';
+export { default as BriefcaseIcon } from './BriefcaseIcon.vue';
+export { default as ChevronDownIcon } from './ChevronDownIcon.vue';
+export { default as ChevronRightIcon } from './ChevronRightIcon.vue';
+export { default as CloseIcon } from './CloseIcon.vue';
+export { default as GitHubIcon } from './GitHubIcon.vue';
+export { default as InstagramIcon } from './InstagramIcon.vue';
+export { default as LinkedInIcon } from './LinkedInIcon.vue';
+export { default as LinkIcon } from './LinkIcon.vue';
+export { default as MailIcon } from './MailIcon.vue';
+export { default as MailOutlineIcon } from './MailOutlineIcon.vue';
+export { default as MoonIcon } from './MoonIcon.vue';
+export { default as SunIcon } from './SunIcon.vue';
+export { default as XIcon } from './XIcon.vue';
